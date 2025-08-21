@@ -8,6 +8,7 @@
 Проект разработан с акцентом на минимализм, атмосферу и удобство — адаптирован под все устройства и готов к продакшену.
 
 Главное меню
+
 <img width="928" height="556" alt="image" src="https://github.com/user-attachments/assets/bf5ff7af-1ef8-4942-aa59-a8d0570c0f46" />
 
 Меню
@@ -16,19 +17,21 @@
 <img width="781" height="891" alt="image" src="https://github.com/user-attachments/assets/22f353c1-b020-43a7-88dc-1c8d797f19bb" />
 
 Философия
+
 <img width="952" height="855" alt="image" src="https://github.com/user-attachments/assets/ecb878f0-4e0f-416e-9555-ced7abe74307" />
 <img width="911" height="510" alt="image" src="https://github.com/user-attachments/assets/9f41ac39-2aba-4dca-9dad-8056f67c9e7a" />
 <img width="814" height="823" alt="image" src="https://github.com/user-attachments/assets/277074c0-86f7-4f04-b317-f96f00c4a618" />
 <img width="781" height="923" alt="image" src="https://github.com/user-attachments/assets/e0bea6e5-6308-4f23-8aa1-c8e1d67c58a4" />
 
 Атмосфера
+
 <img width="1155" height="885" alt="image" src="https://github.com/user-attachments/assets/fb8275e5-f062-44cd-937c-dc9c6d8f9b5c" />
 <img width="405" height="709" alt="image" src="https://github.com/user-attachments/assets/f481670a-745e-4073-ba00-b2a43d3fafa6" />
 
 Бронирование
+
 <img width="583" height="910" alt="image" src="https://github.com/user-attachments/assets/197439f3-97e1-42d9-aa71-00ae3043c33c" />
 <img width="607" height="631" alt="image" src="https://github.com/user-attachments/assets/007f3cd8-668e-4d9e-8a35-fb01b8b5cf53" />
-
 
 ---
 
