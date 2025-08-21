@@ -9,6 +9,7 @@
 
 Главное меню
 <img width="928" height="556" alt="image" src="https://github.com/user-attachments/assets/bf5ff7af-1ef8-4942-aa59-a8d0570c0f46" />
+
 Меню
 <img width="929" height="854" alt="image" src="https://github.com/user-attachments/assets/e2bb146b-cf57-4b1a-b04a-d6ce25757dfb" />
 <img width="783" height="921" alt="image" src="https://github.com/user-attachments/assets/a5953899-ef9c-41c2-9416-912ccd252dc5" />
