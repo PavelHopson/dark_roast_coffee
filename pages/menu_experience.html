@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Меню - Dark Roast Coffee | Премиальные кофейные зерна и напитки</title>
+    <meta name="description" content="Откройте для себя наше меню премиальных кофейных зерен со всего мира. Фильтруйте по происхождению, степени обжарки и методу приготовления." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdarkroast7424back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.7"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-sticky bg-white bg-opacity-95 backdrop-blur-sm shadow-card transition-all duration-300" id="main-header">
+        <nav class="max-w-content mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-10 h-10 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                        <circle cx="20" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8v8c0 2.2-1.8 4-4 4h-8c-2.2 0-4-1.8-4-4v-8z" fill="currentColor" opacity="0.8"/>
+                        <circle cx="16" cy="16" r="1.5" fill="white"/>
+                        <circle cx="24" cy="16" r="1.5" fill="white"/>
+                    </svg>
+                    <span class="font-serif text-xl font-semibold text-primary">Dark Roast Coffee</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Главная</a>
+                    <a href="menu_experience.html" class="text-accent font-medium">Меню</a>
+                    <a href="our_philosophy.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Наша Философия</a>
+                    <a href="atmosphere_gallery.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Атмосфера</a>
+                    <a href="reservation_system.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Бронирование</a>
+                    <a href="coffee_education_center.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Обучение</a>
+                </div>
+                
+                <!-- Cart & CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="relative p-2 text-text-secondary hover:text-accent transition-fast" id="cart-btn">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0h9"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-accent text-primary text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium" id="cart-count">0</span>
+                    </button>
+                    <a href="reservation_system.html" class="btn-primary">Забронировать</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-primary" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden mt-4 pb-4 border-t border-border" id="mobile-menu">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Главная</a>
+                    <a href="menu_experience.html" class="text-accent font-medium">Меню</a>
+                    <a href="our_philosophy.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Наша Философия</a>
+                    <a href="atmosphere_gallery.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Атмосфера</a>
+                    <a href="reservation_system.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Бронирование</a>
+                    <a href="coffee_education_center.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Обучение</a>
+                    <div class="flex items-center justify-between pt-4">
+                        <button class="flex items-center space-x-2 text-text-secondary">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0h9"/>
+                            </svg>
+                            <span>Корзина (0)</span>
+                        </button>
+                        <a href="reservation_system.html" class="btn-primary">Забронировать</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="font-serif text-hero md:text-6xl font-bold mb-6 fade-in">
+                    Меню кофейных открытий
+                </h1>
+                <p class="text-body-lg md:text-xl mb-8 opacity-90 fade-in" style="animation-delay: 0.2s;">
+                    Каждый сорт рассказывает уникальную историю происхождения, мастерства и вкуса
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay: 0.4s;">
+                    <button class="btn-primary bg-accent text-primary" id="filter-btn">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"/>
+                        </svg>
+                        Фильтры
+                    </button>
+                    <button class="btn-secondary bg-white bg-opacity-10 border-white text-white hover:bg-white hover:text-primary" id="reset-filters">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Сбросить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Panel -->
+    <section class="py-8 bg-surface border-b border-border" id="filter-panel" style="display: none;">
+        <div class="max-w-content mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Origin Filter -->
+                <div>
+                    <label class="block text-sm font-medium mb-3">Происхождение</label>
+                    <select class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" id="origin-filter">
+                        <option value>Все страны</option>
+                        <option value="ethiopia">Эфиопия</option>
+                        <option value="colombia">Колумбия</option>
+                        <option value="guatemala">Гватемала</option>
+                        <option value="brazil">Бразилия</option>
+                        <option value="kenya">Кения</option>
+                        <option value="jamaica">Ямайка</option>
+                    </select>
+                </div>
+                
+                <!-- Roast Level Filter -->
+                <div>
+                    <label class="block text-sm font-medium mb-3">Степень обжарки</label>
+                    <select class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" id="roast-filter">
+                        <option value>Все степени</option>
+                        <option value="light">Светлая</option>
+                        <option value="medium">Средняя</option>
+                        <option value="medium-dark">Средне-темная</option>
+                        <option value="dark">Темная</option>
+                    </select>
+                </div>
+                
+                <!-- Brewing Method Filter -->
+                <div>
+                    <label class="block text-sm font-medium mb-3">Метод приготовления</label>
+                    <select class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" id="brewing-filter">
+                        <option value>Все методы</option>
+                        <option value="espresso">Эспрессо</option>
+                        <option value="pour-over">Пуровер</option>
+                        <option value="french-press">Френч-пресс</option>
+                        <option value="cold-brew">Колд-брю</option>
+                        <option value="aeropress">Аэропресс</option>
+                    </select>
+                </div>
+                
+                <!-- Flavor Profile Filter -->
+                <div>
+                    <label class="block text-sm font-medium mb-3">Вкусовой профиль</label>
+                    <select class="w-full p-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent" id="flavor-filter">
+                        <option value>Все профили</option>
+                        <option value="floral">Цветочный</option>
+                        <option value="fruity">Фруктовый</option>
+                        <option value="nutty">Ореховый</option>
+                        <option value="chocolate">Шоколадный</option>
+                        <option value="spicy">Пряный</option>
+                        <option value="caramel">Карамельный</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Specials -->
+    <section class="py-20 bg-background">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-display font-bold mb-4">Сезонные специальности</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Ограниченные предложения, доступные только в августе 2025
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- Seasonal Special 1 -->
+                <div class="card-elevated p-8 group hover:scale-105 transition-all duration-300 border-2 border-accent border-opacity-20">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="bg-accent text-primary px-3 py-1 rounded-full text-sm font-medium">Новинка</span>
+                        <span class="text-text-secondary text-sm">До 31 августа</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <h3 class="font-serif text-subheading font-semibold mb-3">Эфиопия Гуджи Урага</h3>
+                            <p class="text-text-secondary mb-4">Редкий сорт с нотами черной смородины, темного шоколада и цветочным послевкусием</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Высота:</span>
+                                    <span>2100-2300м</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Обработка:</span>
+                                    <span>Натуральная</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Время приготовления:</span>
+                                    <span>4-6 минут</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-2xl font-bold text-primary">₽1,290</span>
+                                    <span class="text-text-secondary ml-2">за 250г</span>
+                                </div>
+                                <button class="btn-primary add-to-cart" data-name="Эфиопия Гуджи Урага" data-price="1290">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="w-full h-64 overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=2861&auto=format&fit=crop" alt="Эфиопия Гуджи Урага" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seasonal Special 2 -->
+                <div class="card-elevated p-8 group hover:scale-105 transition-all duration-300 border-2 border-accent border-opacity-20">
+                    <div class="flex items-start justify-between mb-4">
+                        <span class="bg-warning text-white px-3 py-1 rounded-full text-sm font-medium">Лимитированная серия</span>
+                        <span class="text-text-secondary text-sm">Осталось 15 кг</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <h3 class="font-serif text-subheading font-semibold mb-3">Ямайка Блю Маунтин</h3>
+                            <p class="text-text-secondary mb-4">Легендарный кофе с мягким вкусом, нотами ванили и отсутствием горечи</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Высота:</span>
+                                    <span>1200-1700м</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Обработка:</span>
+                                    <span>Мытая</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Время приготовления:</span>
+                                    <span>3-5 минут</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-2xl font-bold text-primary">₽2,890</span>
+                                    <span class="text-text-secondary ml-2">за 250г</span>
+                                </div>
+                                <button class="btn-primary add-to-cart" data-name="Ямайка Блю Маунтин" data-price="2890">В корзину</button>
+                            </div>
+                        </div>
+                        <div class="w-full h-64 overflow-hidden rounded-lg">
+                            <img src="https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg" alt="Ямайка Блю Маунтин" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Menu Grid -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-display font-bold mb-4">Наша коллекция кофе</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Тщательно отобранные зерна со всего мира для истинных ценителей
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="coffee-grid">
+                <!-- Coffee Item 1 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="ethiopia" data-roast="light" data-brewing="pour-over" data-flavor="floral">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=2861&auto=format&fit=crop" alt="Эфиопия Йиргачеффе" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Эфиопия Йиргачеффе</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Цветочные ноты с яркой кислинкой и послевкусием черного чая</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="pour-over">Пуровер</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="espresso">Эспрессо</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="french-press">Френч-пресс</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="890">250г - ₽890</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="1690">500г - ₽1,690</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Цветочный</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Цитрус</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Чай</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽890</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Эфиопия Йиргачеффе" data-price="890">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 2 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="colombia" data-roast="medium" data-brewing="espresso" data-flavor="caramel">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2940&auto=format&fit=crop" alt="Колумбия Уила" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Колумбия Уила</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Сбалансированный вкус с нотами карамели и темного шоколада</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="espresso">Эспрессо</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="pour-over">Пуровер</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="french-press">Френч-пресс</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="750">250г - ₽750</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="1420">500г - ₽1,420</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Карамель</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Шоколад</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Орехи</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽750</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Колумбия Уила" data-price="750">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 3 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="guatemala" data-roast="medium-dark" data-brewing="french-press" data-flavor="spicy">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2787&auto=format&fit=crop" alt="Гватемала Антигуа" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Гватемала Антигуа</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Полнотелый кофе с дымными нотами и пряным послевкусием</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="french-press">Френч-пресс</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="espresso">Эспрессо</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="cold-brew">Колд-брю</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="820">250г - ₽820</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="1550">500г - ₽1,550</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Дымный</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Пряный</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Табак</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽820</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Гватемала Антигуа" data-price="820">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 4 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="brazil" data-roast="dark" data-brewing="espresso" data-flavor="chocolate">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg" alt="Бразилия Сантос" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=2861&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Бразилия Сантос</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Классический эспрессо-бленд с нотами темного шоколада и орехов</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="espresso">Эспрессо</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="french-press">Френч-пресс</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="aeropress">Аэропресс</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="690">250г - ₽690</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="1290">500г - ₽1,290</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Шоколад</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Орехи</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Карамель</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽690</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Бразилия Сантос" data-price="690">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 5 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="kenya" data-roast="medium" data-brewing="pour-over" data-flavor="fruity">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Кения АА" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Кения АА</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Яркий кофе с винной кислинкой и нотами черной смородины</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="pour-over">Пуровер</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="aeropress">Аэропресс</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="cold-brew">Колд-брю</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="950">250г - ₽950</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="1800">500г - ₽1,800</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Смородина</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Вино</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Цитрус</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽950</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Кения АА" data-price="950">В корзину</button>
+                    </div>
+                </div>
+                
+                <!-- Coffee Item 6 -->
+                <div class="card-elevated p-6 group hover:scale-105 transition-all duration-300 coffee-item" data-origin="colombia" data-roast="light" data-brewing="cold-brew" data-flavor="nutty">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2940&auto=format&fit=crop" alt="Колумбия Гейша" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-3">Колумбия Гейша</h3>
+                    <p class="text-text-secondary mb-4 text-sm">Эксклюзивный сорт с деликатным вкусом и ореховыми нотами</p>
+                    
+                    <!-- Brewing Method Selector -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Метод приготовления:</label>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast active" data-method="cold-brew">Колд-брю</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="pour-over">Пуровер</button>
+                            <button class="brewing-method px-3 py-1 text-xs border border-border rounded-full hover:bg-accent hover:text-primary transition-fast" data-method="aeropress">Аэропресс</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium mb-2">Размер упаковки:</label>
+                        <div class="flex gap-2">
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast active" data-size="250" data-price="1590">250г - ₽1,590</button>
+                            <button class="size-option px-3 py-2 text-sm border border-border rounded hover:bg-accent hover:text-primary transition-fast" data-size="500" data-price="3000">500г - ₽3,000</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasting Notes -->
+                    <div class="mb-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Орехи</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Мед</span>
+                            <span class="px-2 py-1 bg-accent bg-opacity-10 text-accent text-xs rounded-full">Ваниль</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <span class="text-xl font-bold text-primary price">₽1,590</span>
+                            <span class="text-text-secondary text-sm ml-1 size-text">за 250г</span>
+                        </div>
+                        <button class="btn-primary add-to-cart" data-name="Колумбия Гейша" data-price="1590">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Menu Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-display font-bold mb-4">Дополните кофе</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Артизанальная выпечка и легкие блюда от местных поставщиков
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Food Item 1 -->
+                <div class="card-elevated p-6 text-center group hover:scale-105 transition-all duration-300">
+                    <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2942&auto=format&fit=crop" alt="Круассан с миндалем" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-semibold mb-2">Круассан с миндалем</h3>
+                    <p class="text-text-secondary text-sm mb-3">Слоеное тесто с миндальным кремом</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-primary">₽290</span>
+                        <button class="btn-primary text-sm px-4 py-2 add-to-cart" data-name="Круассан с миндалем" data-price="290">Добавить</button>
+                    </div>
+                </div>
+                
+                <!-- Food Item 2 -->
+                <div class="card-elevated p-6 text-center group hover:scale-105 transition-all duration-300">
+                    <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.pixabay.com/photo/2017/01/11/11/33/cake-1971552_1280.jpg" alt="Чизкейк Нью-Йорк" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=2865&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-semibold mb-2">Чизкейк Нью-Йорк</h3>
+                    <p class="text-text-secondary text-sm mb-3">Классический с ягодным соусом</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-primary">₽390</span>
+                        <button class="btn-primary text-sm px-4 py-2 add-to-cart" data-name="Чизкейк Нью-Йорк" data-price="390">Добавить</button>
+                    </div>
+                </div>
+                
+                <!-- Food Item 3 -->
+                <div class="card-elevated p-6 text-center group hover:scale-105 transition-all duration-300">
+                    <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=2940&auto=format&fit=crop" alt="Авокадо тост" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-semibold mb-2">Авокадо тост</h3>
+                    <p class="text-text-secondary text-sm mb-3">На ржаном хлебе с семенами</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-primary">₽450</span>
+                        <button class="btn-primary text-sm px-4 py-2 add-to-cart" data-name="Авокадо тост" data-price="450">Добавить</button>
+                    </div>
+                </div>
+                
+                <!-- Food Item 4 -->
+                <div class="card-elevated p-6 text-center group hover:scale-105 transition-all duration-300">
+                    <div class="w-full h-32 mb-4 overflow-hidden rounded-lg">
+                        <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Гранола с йогуртом" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571115764595-644a1f56a55c?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;" />
+                    </div>
+                    <h3 class="font-semibold mb-2">Гранола с йогуртом</h3>
+                    <p class="text-text-secondary text-sm mb-3">Домашняя гранола с греческим йогуртом</p>
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-primary">₽350</span>
+                        <button class="btn-primary text-sm px-4 py-2 add-to-cart" data-name="Гранола с йогуртом" data-price="350">Добавить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Guide Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-display font-bold mb-4">Рекомендации по приготовлению</h2>
+                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
+                    Раскройте полный потенциал каждого зерна с нашими профессиональными советами
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Brewing Method 1 -->
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-4">Пуровер</h3>
+                    <div class="text-left space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Помол:</span>
+                            <span>Средний</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Соотношение:</span>
+                            <span>1:15</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Температура:</span>
+                            <span>92-96°C</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Время:</span>
+                            <span>3-4 минуты</span>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-4">Идеально для светлых и средних обжарок</p>
+                </div>
+                
+                <!-- Brewing Method 2 -->
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-4">Эспрессо</h3>
+                    <div class="text-left space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Помол:</span>
+                            <span>Мелкий</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Доза:</span>
+                            <span>18-20г</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Давление:</span>
+                            <span>9 бар</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Время:</span>
+                            <span>25-30 сек</span>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-4">Лучше всего для средних и темных обжарок</p>
+                </div>
+                
+                <!-- Brewing Method 3 -->
+                <div class="card-elevated p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-subheading font-semibold mb-4">Колд-брю</h3>
+                    <div class="text-left space-y-3 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Помол:</span>
+                            <span>Крупный</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Соотношение:</span>
+                            <span>1:8</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Температура:</span>
+                            <span>Холодная</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-text-secondary">Время:</span>
+                            <span>12-24 часа</span>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary text-sm mt-4">Отлично для фруктовых и цветочных сортов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Cart -->
+    <div class="fixed bottom-6 right-6 z-sticky" id="sticky-cart" style="display: none;">
+        <div class="bg-primary text-white p-4 rounded-lg shadow-modal">
+            <div class="flex items-center space-x-4">
+                <div>
+                    <p class="font-medium">Корзина</p>
+                    <p class="text-sm opacity-75" id="cart-summary">0 товаров</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-bold text-accent" id="cart-total">₽0</p>
+                    <button class="btn-primary bg-accent text-primary text-sm mt-2" id="checkout-btn">Оформить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-content mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <svg class="w-10 h-10 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <circle cx="20" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8v8c0 2.2-1.8 4-4 4h-8c-2.2 0-4-1.8-4-4v-8z" fill="currentColor" opacity="0.8"/>
+                            <circle cx="16" cy="16" r="1.5" fill="white"/>
+                            <circle cx="24" cy="16" r="1.5" fill="white"/>
+                        </svg>
+                        <span class="font-serif text-xl font-semibold">Dark Roast Coffee</span>
+                    </div>
+                    <p class="text-white opacity-75 mb-6 max-w-md">
+                        Место, где кофе становится искусством, а моменты превращаются в воспоминания. 
+                        Присоединяйтесь к нашему сообществу ценителей настоящего кофе.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-fast">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Быстрые ссылки</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Главная</a></li>
+                        <li><a href="menu_experience.html" class="text-accent">Меню</a></li>
+                        <li><a href="our_philosophy.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">О нас</a></li>
+                        <li><a href="atmosphere_gallery.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Галерея</a></li>
+                        <li><a href="reservation_system.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Бронирование</a></li>
+                        <li><a href="coffee_education_center.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Обучение</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Контакты</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <span class="text-white opacity-75">ул. Тверская, 15, Москва</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <span class="text-white opacity-75">+7 (495) 123-45-67</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="text-white opacity-75">Пн-Вс: 7:00 - 23:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
+                <p class="text-white opacity-75">© 2025 Dark Roast Coffee. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter panel toggle
+        const filterBtn = document.getElementById('filter-btn');
+        const filterPanel = document.getElementById('filter-panel');
+        
+        filterBtn.addEventListener('click', () => {
+            filterPanel.style.display = filterPanel.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Cart functionality
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+
+        const cartCountEl = document.getElementById('cart-count');
+        const cartSummaryEl = document.getElementById('cart-summary');
+        const cartTotalEl = document.getElementById('cart-total');
+        const stickyCart = document.getElementById('sticky-cart');
+
+        function updateCart() {
+            cartCountEl.textContent = cartCount;
+            cartSummaryEl.textContent = `${cartCount} товар${cartCount === 1 ? '' : cartCount < 5 ? 'а' : 'ов'}`;
+            cartTotalEl.textContent = `₽${cartTotal.toLocaleString('ru-RU')}`;
+            
+            if (cartCount > 0) {
+                stickyCart.style.display = 'block';
+            } else {
+                stickyCart.style.display = 'none';
+            }
+        }
+
+        // Add to cart functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart')) {
+                const name = e.target.getAttribute('data-name');
+                const price = parseInt(e.target.getAttribute('data-price'));
+                
+                cart.push({ name, price });
+                cartCount++;
+                cartTotal += price;
+                updateCart();
+                
+                // Visual feedback
+                e.target.textContent = 'Добавлено!';
+                e.target.classList.add('bg-success');
+                setTimeout(() => {
+                    e.target.textContent = e.target.closest('.coffee-item') ? 'В корзину' : 'Добавить';
+                    e.target.classList.remove('bg-success');
+                }, 1000);
+            }
+        });
+
+        // Size option functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('size-option')) {
+                const parent = e.target.closest('.coffee-item');
+                const sizeOptions = parent.querySelectorAll('.size-option');
+                const priceEl = parent.querySelector('.price');
+                const sizeTextEl = parent.querySelector('.size-text');
+                const addToCartBtn = parent.querySelector('.add-to-cart');
+                
+                sizeOptions.forEach(option => option.classList.remove('active', 'bg-accent', 'text-primary'));
+                e.target.classList.add('active', 'bg-accent', 'text-primary');
+                
+                const price = e.target.getAttribute('data-price');
+                const size = e.target.getAttribute('data-size');
+                
+                priceEl.textContent = `₽${parseInt(price).toLocaleString('ru-RU')}`;
+                sizeTextEl.textContent = `за ${size}г`;
+                addToCartBtn.setAttribute('data-price', price);
+            }
+        });
+
+        // Brewing method functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('brewing-method')) {
+                const parent = e.target.closest('.coffee-item');
+                const brewingMethods = parent.querySelectorAll('.brewing-method');
+                
+                brewingMethods.forEach(method => method.classList.remove('active', 'bg-accent', 'text-primary'));
+                e.target.classList.add('active', 'bg-accent', 'text-primary');
+            }
+        });
+
+        // Filter functionality
+        const originFilter = document.getElementById('origin-filter');
+        const roastFilter = document.getElementById('roast-filter');
+        const brewingFilter = document.getElementById('brewing-filter');
+        const flavorFilter = document.getElementById('flavor-filter');
+        const resetFiltersBtn = document.getElementById('reset-filters');
+        const coffeeItems = document.querySelectorAll('.coffee-item');
+
+        function applyFilters() {
+            const origin = originFilter.value;
+            const roast = roastFilter.value;
+            const brewing = brewingFilter.value;
+            const flavor = flavorFilter.value;
+
+            coffeeItems.forEach(item => {
+                const itemOrigin = item.getAttribute('data-origin');
+                const itemRoast = item.getAttribute('data-roast');
+                const itemBrewing = item.getAttribute('data-brewing');
+                const itemFlavor = item.getAttribute('data-flavor');
+
+                const matchesOrigin = !origin || itemOrigin === origin;
+                const matchesRoast = !roast || itemRoast === roast;
+                const matchesBrewing = !brewing || itemBrewing === brewing;
+                const matchesFlavor = !flavor || itemFlavor === flavor;
+
+                if (matchesOrigin && matchesRoast && matchesBrewing && matchesFlavor) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        originFilter.addEventListener('change', applyFilters);
+        roastFilter.addEventListener('change', applyFilters);
+        brewingFilter.addEventListener('change', applyFilters);
+        flavorFilter.addEventListener('change', applyFilters);
+
+        resetFiltersBtn.addEventListener('click', () => {
+            originFilter.value = '';
+            roastFilter.value = '';
+            brewingFilter.value = '';
+            flavorFilter.value = '';
+            applyFilters();
+        });
+
+        // Checkout functionality
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            if (cart.length > 0) {
+                alert(`Спасибо за заказ! Общая сумма: ₽${cartTotal.toLocaleString('ru-RU')}\n\nМы свяжемся с вами для подтверждения заказа.`);
+                cart = [];
+                cartCount = 0;
+                cartTotal = 0;
+                updateCart();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
