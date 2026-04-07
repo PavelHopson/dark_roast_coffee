@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavel Hopson — Full-Stack Developer & AI Engineer</title>
+    <meta name="description" content="Portfolio of Pavel Hopson — Full-Stack Developer & AI Engineer. 25+ projects, live demos, modern tech stack." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+        :root {
+            --portfolio-bg: #0D0D0D;
+            --portfolio-surface: #1A1A1A;
+            --portfolio-card: #1F1F1F;
+            --portfolio-gold: #D4AF37;
+            --portfolio-gold-dim: rgba(212, 175, 55, 0.15);
+            --portfolio-text: #F0EDE8;
+            --portfolio-text-secondary: #9A9A9A;
+            --portfolio-border: #2A2A2A;
+        }
+        body.portfolio-page {
+            background: var(--portfolio-bg);
+            color: var(--portfolio-text);
+        }
+        .portfolio-page h1, .portfolio-page h2, .portfolio-page h3, .portfolio-page h4 {
+            color: var(--portfolio-text);
+        }
+        .portfolio-page .text-text-secondary {
+            color: var(--portfolio-text-secondary);
+        }
+        .portfolio-page .bg-surface {
+            background: var(--portfolio-surface);
+        }
+        .portfolio-page .card-elevated {
+            background: var(--portfolio-card);
+            border: 1px solid var(--portfolio-border);
+        }
+        .portfolio-page .card-elevated:hover {
+            border-color: var(--portfolio-gold);
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            background: var(--portfolio-gold-dim);
+            color: var(--portfolio-gold);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--portfolio-gold);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--portfolio-text-secondary);
+            margin-top: 0.25rem;
+        }
+        .btn-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            background: var(--portfolio-gold);
+            color: #0D0D0D;
+            transition: all 300ms ease-out;
+            text-decoration: none;
+        }
+        .btn-demo:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border-radius: 6px;
+            border: 1px solid var(--portfolio-border);
+            color: var(--portfolio-text-secondary);
+            background: transparent;
+            transition: all 300ms ease-out;
+            text-decoration: none;
+        }
+        .btn-github:hover {
+            border-color: var(--portfolio-text-secondary);
+            color: var(--portfolio-text);
+        }
+        .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 9999px;
+            background: var(--portfolio-card);
+            border: 1px solid var(--portfolio-border);
+            color: var(--portfolio-text);
+            transition: all 300ms ease-out;
+        }
+        .tech-pill:hover {
+            border-color: var(--portfolio-gold);
+            color: var(--portfolio-gold);
+        }
+        .hero-gradient {
+            background: radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 60%);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--portfolio-border), transparent);
+        }
+    </style>
+</head>
+<body class="portfolio-page">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-sticky bg-transparent backdrop-blur-sm transition-all duration-300" id="main-header" style="background: rgba(13,13,13,0.85);">
+        <nav class="max-w-content mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <span class="font-serif text-xl font-semibold" style="color: var(--portfolio-gold);">PH</span>
+                    <span class="font-serif text-xl font-semibold" style="color: var(--portfolio-text);">Pavel Hopson</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#projects" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);" onmouseover="this.style.color='var(--portfolio-gold)'" onmouseout="this.style.color='var(--portfolio-text-secondary)'">Проекты</a>
+                    <a href="#tech" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);" onmouseover="this.style.color='var(--portfolio-gold)'" onmouseout="this.style.color='var(--portfolio-text-secondary)'">Технологии</a>
+                    <a href="#contact" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);" onmouseover="this.style.color='var(--portfolio-gold)'" onmouseout="this.style.color='var(--portfolio-text-secondary)'">Контакты</a>
+                    <a href="homepage.html" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);" onmouseover="this.style.color='var(--portfolio-gold)'" onmouseout="this.style.color='var(--portfolio-text-secondary)'">Dark Roast Coffee</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://github.com/PavelHopson" target="_blank" rel="noopener" class="btn-demo">GitHub Profile</a>
+                </div>
+                <button class="md:hidden" id="mobile-menu-btn" style="color: var(--portfolio-text);">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="md:hidden hidden mt-4 pb-4" id="mobile-menu" style="border-top: 1px solid var(--portfolio-border);">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#projects" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);">Проекты</a>
+                    <a href="#tech" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);">Технологии</a>
+                    <a href="#contact" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);">Контакты</a>
+                    <a href="homepage.html" class="transition-fast font-medium" style="color: var(--portfolio-text-secondary);">Dark Roast Coffee</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center hero-gradient pt-20">
+        <div class="max-w-content mx-auto px-6 text-center">
+            <div class="fade-in">
+                <p class="font-cta text-caption tracking-widest uppercase mb-6" style="color: var(--portfolio-gold);">Full-Stack Developer & AI Engineer</p>
+                <h1 class="font-serif font-bold mb-6" style="font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; letter-spacing: -0.02em;">
+                    Pavel Hopson
+                </h1>
+                <p class="text-body-lg max-w-2xl mx-auto mb-12" style="color: var(--portfolio-text-secondary);">
+                    Создаю современные веб-приложения, AI-решения и инструменты автоматизации.
+                    От идеи до продакшена — каждый проект с вниманием к деталям.
+                </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="fade-in flex flex-wrap justify-center gap-12 md:gap-20 mb-16" style="animation-delay: 0.2s;">
+                <div class="text-center">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Проектов</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Live Demos</div>
+                </div>
+                <div class="text-center">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Технологий</div>
+                </div>
+            </div>
+
+            <div class="fade-in flex flex-col sm:flex-row gap-4 justify-center" style="animation-delay: 0.4s;">
+                <a href="#projects" class="btn-demo text-lg px-10 py-4">Смотреть проекты</a>
+                <a href="https://github.com/PavelHopson" target="_blank" rel="noopener" class="btn-github text-lg px-10 py-4">GitHub Profile</a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-50">
+            <div class="animate-bounce">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--portfolio-text-secondary);">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="font-cta text-caption tracking-widest uppercase mb-4" style="color: var(--portfolio-gold);">Портфолио</p>
+                <h2 class="font-serif text-display font-bold mb-4">Избранные проекты</h2>
+                <p class="text-body-lg max-w-2xl mx-auto" style="color: var(--portfolio-text-secondary);">
+                    Каждый проект — это решение реальной задачи с использованием современного стека технологий
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- CryptoPulse 2077 -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">CryptoPulse 2077</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">Cyberpunk-стиль дашборд для криптовалют с реальными данными и анимациями</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">TypeScript</span>
+                        <span class="badge">API</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://cryptopulse-1d0.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/CryptoPulse2077" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- ShotForge -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">ShotForge</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">AI-генератор скриншотов и мокапов для продуктовых презентаций</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">AI</span>
+                        <span class="badge">Cloudflare</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://shotforge.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/shotforge" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Educator AI -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">Educator AI</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">AI-платформа для персонализированного обучения с адаптивными курсами</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">AI</span>
+                        <span class="badge">TypeScript</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://educator-ai.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/Educator-AI" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Text2Image Studio -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">Text2Image Studio</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">Студия генерации изображений из текстовых описаний на базе AI-моделей</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">AI</span>
+                        <span class="badge">API</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://text2image-studio.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/Text2Image" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- InterviewForge -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">InterviewForge</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">AI-тренажёр для подготовки к техническим собеседованиям с обратной связью</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">AI</span>
+                        <span class="badge">TypeScript</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://interviewforge-3pf.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/InterviewForge" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Eclipse PremiumRent -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">Eclipse PremiumRent</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">Премиальный лендинг для аренды недвижимости с каталогом и CTA-секциями</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">HTML</span>
+                        <span class="badge">Tailwind</span>
+                        <span class="badge">JS</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://eclipse-premiumrent.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/eclipse-hopson-sentinel" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Smart Fitness Agent -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">Smart Fitness Agent</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">AI-агент для бронирования фитнес-занятий с умными рекомендациями</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">AI Agent</span>
+                        <span class="badge">API</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://fitness-booking-agent.pages.dev" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/Smart-Fitness-Booking-Agent" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- CineMate -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">CineMate</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">Каталог фильмов с поиском, фильтрацией и подробной информацией из TMDB API</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">React</span>
+                        <span class="badge">TMDB API</span>
+                        <span class="badge">CSS</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://pavelhopson.github.io/cinemate-movie-finder/" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/cinemate-movie-finder" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Modern 2048 -->
+                <div class="card-elevated rounded-lg p-6 flex flex-col transition-all duration-300 hover:scale-[1.02]">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-serif text-subheading font-semibold">Modern 2048</h3>
+                        <svg class="w-5 h-5 flex-shrink-0 mt-1" style="color: var(--portfolio-gold);" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"/></svg>
+                    </div>
+                    <p class="text-body mb-4" style="color: var(--portfolio-text-secondary);">Современная версия классической игры 2048 с плавными анимациями и адаптивным дизайном</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">Game</span>
+                    </div>
+                    <div class="mt-auto flex gap-3">
+                        <a href="https://pavelhopson.github.io/modern-2048/" target="_blank" rel="noopener" class="btn-demo">Открыть демо</a>
+                        <a href="https://github.com/PavelHopson/modern-2048" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-content mx-auto"></div>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-20">
+        <div class="max-w-content mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="font-cta text-caption tracking-widest uppercase mb-4" style="color: var(--portfolio-gold);">Стек</p>
+                <h2 class="font-serif text-display font-bold mb-4">Технологии</h2>
+                <p class="text-body-lg max-w-2xl mx-auto" style="color: var(--portfolio-text-secondary);">
+                    Инструменты и технологии, которые я использую в проектах
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="text-center">
+                    <h3 class="font-serif text-subheading font-semibold mb-6" style="color: var(--portfolio-gold);">Frontend</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">TypeScript</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">Tailwind CSS</span>
+                        <span class="tech-pill">HTML5 / CSS3</span>
+                        <span class="tech-pill">Vite</span>
+                    </div>
+                </div>
+                <!-- Backend & AI -->
+                <div class="text-center">
+                    <h3 class="font-serif text-subheading font-semibold mb-6" style="color: var(--portfolio-gold);">Backend & AI</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="tech-pill">Node.js</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">PHP / Laravel</span>
+                        <span class="tech-pill">OpenAI API</span>
+                        <span class="tech-pill">Claude API</span>
+                        <span class="tech-pill">REST API</span>
+                    </div>
+                </div>
+                <!-- Tools & Infra -->
+                <div class="text-center">
+                    <h3 class="font-serif text-subheading font-semibold mb-6" style="color: var(--portfolio-gold);">Инфраструктура</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="tech-pill">Git / GitHub</span>
+                        <span class="tech-pill">Cloudflare Pages</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">MySQL / PostgreSQL</span>
+                        <span class="tech-pill">Linux / Nginx</span>
+                        <span class="tech-pill">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-content mx-auto"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="max-w-narrow mx-auto px-6 text-center">
+            <p class="font-cta text-caption tracking-widest uppercase mb-4" style="color: var(--portfolio-gold);">Контакты</p>
+            <h2 class="font-serif text-display font-bold mb-6">Давайте работать вместе</h2>
+            <p class="text-body-lg mb-10" style="color: var(--portfolio-text-secondary);">
+                Открыт к интересным проектам и коллаборациям. Свяжитесь со мной через GitHub.
+            </p>
+            <a href="https://github.com/PavelHopson" target="_blank" rel="noopener" class="btn-demo text-lg px-10 py-4">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub Profile
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8" style="border-top: 1px solid var(--portfolio-border);">
+        <div class="max-w-content mx-auto px-6 text-center">
+            <p class="text-caption" style="color: var(--portfolio-text-secondary);">
+                &copy; 2026 Pavel Hopson. Built with precision.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

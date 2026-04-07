@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #1A1A1A; /* sophisticated-charcoal */
+  --color-secondary: #2F2F2F; /* elevated-charcoal */
+  --color-accent: #D4AF37; /* precious-gold */
+  
+  /* Background Colors */
+  --color-background: #FAFAF9; /* warm-canvas */
+  --color-surface: #F5F4F2; /* gentle-depth */
+  
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* sophisticated-charcoal */
+  --color-text-secondary: #666666; /* clear-hierarchy */
+  
+  /* Status Colors */
+  --color-success: #2D5A27; /* natural-confidence */
+  --color-warning: #B8860B; /* thoughtful-caution */
+  --color-error: #8B4513; /* helpful-concern */
+  
+  /* Border Colors */
+  --color-border: #E5E5E5; /* minimal-hairline */
+  
+  /* Shadow Values */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.12);
+  
+  /* Animation Timing */
+  --transition-fast: 300ms ease-out;
+  --transition-modal: 400ms ease-out;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text-primary);
+  }
+  
+  .font-accent {
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .font-cta {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-primary font-cta font-medium px-8 py-3 rounded-sm transition-all duration-300 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border border-primary text-primary font-cta font-medium px-8 py-3 rounded-sm transition-all duration-300 hover:bg-primary hover:text-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .card-elevated {
+    @apply bg-surface rounded-lg shadow-card transition-shadow duration-300 hover:shadow-subtle;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .border-minimal {
+    border: 1px solid var(--color-border);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .parallax-subtle {
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+  }
+}
+
+@layer utilities {
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-modal {
+    box-shadow: var(--shadow-modal);
+  }
+  
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+  
+  .transition-modal {
+    transition: all var(--transition-modal);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
