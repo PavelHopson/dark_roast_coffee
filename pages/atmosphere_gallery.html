@@ -46,7 +46,7 @@
     <!-- ═══════════ HERO ═══════════ -->
     <section class="relative min-h-screen flex items-end pb-24 lg:pb-32 overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80&auto=format" alt="Главный зал" class="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80&auto=format" alt="Главный зал" class="w-full h-full object-cover" onerror="this.src='https://picsum.photos/1920/1440?random=60'; this.onerror=null;" />
             <div class="hero-gradient absolute inset-0"></div>
         </div>
         <div class="absolute inset-0 bg-mesh opacity-50"></div>
@@ -66,9 +66,9 @@
     </section>
 
     <!-- ═══════════ TIME OF DAY GALLERY ═══════════ -->
-    <section class="py-24 bg-dark-800">
+    <section class="py-16 lg:py-20 bg-dark-800">
         <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-10 lg:mb-14 animate-on-scroll">
                 <span class="section-label">В течение дня</span>
                 <h2 class="text-display-sm lg:text-display font-bold mb-4">Атмосфера в течение дня</h2>
                 <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Наше пространство меняется вместе с ритмом города</p>
@@ -87,8 +87,8 @@
             <div class="time-gallery active" id="morning-gallery">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-2 animate-on-scroll">
-                        <div class="img-zoom aspect-[16/9]">
-                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format" alt="Утренняя атмосфера" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[16/9]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format" alt="Утренняя атмосфера" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/800/600?random=61'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Утренний свет</h3>
@@ -97,8 +97,8 @@
                     </div>
                     <div class="space-y-6">
                         <div class="animate-on-scroll" data-delay="1">
-                            <div class="img-zoom aspect-[4/3]">
-                                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&q=80&auto=format" alt="Рабочая зона" class="w-full h-full object-cover" loading="lazy" />
+                            <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&q=80&auto=format" alt="Рабочая зона" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=62'; this.onerror=null;" />
                             </div>
                             <div class="mt-3">
                                 <h4 class="font-semibold text-cream-100 mb-1 text-sm">Рабочие места</h4>
@@ -106,8 +106,8 @@
                             </div>
                         </div>
                         <div class="animate-on-scroll" data-delay="2">
-                            <div class="img-zoom aspect-[4/3]">
-                                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=80&auto=format" alt="Барная стойка" class="w-full h-full object-cover" loading="lazy" />
+                            <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&q=80&auto=format" alt="Барная стойка" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=63'; this.onerror=null;" />
                             </div>
                             <div class="mt-3">
                                 <h4 class="font-semibold text-cream-100 mb-1 text-sm">Барная стойка</h4>
@@ -122,8 +122,8 @@
             <div class="time-gallery hidden" id="afternoon-gallery">
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="animate-on-scroll">
-                        <div class="img-zoom aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=80&auto=format" alt="Дневная терраса" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[3/4]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&q=80&auto=format" alt="Дневная терраса" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=64'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Летняя терраса</h3>
@@ -131,8 +131,8 @@
                         </div>
                     </div>
                     <div class="animate-on-scroll" data-delay="1">
-                        <div class="img-zoom aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80&auto=format" alt="Деловые встречи" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[3/4]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&q=80&auto=format" alt="Деловые встречи" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=65'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Деловые встречи</h3>
@@ -140,8 +140,8 @@
                         </div>
                     </div>
                     <div class="animate-on-scroll" data-delay="2">
-                        <div class="img-zoom aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80&auto=format" alt="Центральный зал" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[3/4]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&q=80&auto=format" alt="Центральный зал" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=66'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Центральный зал</h3>
@@ -155,8 +155,8 @@
             <div class="time-gallery hidden" id="evening-gallery">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="animate-on-scroll">
-                        <div class="img-zoom aspect-[4/3]">
-                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format" alt="Вечернее освещение" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format" alt="Вечернее освещение" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=67'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Вечерняя атмосфера</h3>
@@ -164,8 +164,8 @@
                         </div>
                     </div>
                     <div class="animate-on-scroll" data-delay="1">
-                        <div class="img-zoom aspect-[4/3]">
-                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80&auto=format" alt="Интимные столики" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80&auto=format" alt="Интимные столики" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=68'; this.onerror=null;" />
                         </div>
                         <div class="mt-4">
                             <h3 class="font-display text-lg text-cream-50 font-semibold mb-2">Интимные столики</h3>
@@ -178,9 +178,9 @@
     </section>
 
     <!-- ═══════════ DESIGN ELEMENTS ═══════════ -->
-    <section class="py-24 bg-dark-900">
+    <section class="py-16 lg:py-20 bg-dark-900">
         <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-10 lg:mb-14 animate-on-scroll">
                 <span class="section-label">Детали</span>
                 <h2 class="text-display-sm lg:text-display font-bold mb-4">Дизайнерские решения</h2>
                 <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Каждый элемент интерьера тщательно подобран</p>
@@ -188,8 +188,8 @@
 
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
                 <div class="fade-left">
-                    <div class="img-zoom aspect-[3/4]">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format" alt="Столы из восстановленного дерева" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[3/4]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format" alt="Столы из восстановленного дерева" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=69'; this.onerror=null;" />
                     </div>
                 </div>
                 <div class="fade-right">
@@ -214,8 +214,8 @@
 
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="lg:order-2 fade-right">
-                    <div class="img-zoom aspect-[3/4]">
-                        <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=600&q=80&auto=format" alt="Обжарочное оборудование" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[3/4]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=600&q=80&auto=format" alt="Обжарочное оборудование" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=70'; this.onerror=null;" />
                     </div>
                 </div>
                 <div class="lg:order-1 fade-left">
@@ -235,10 +235,10 @@
     </section>
 
     <!-- ═══════════ WORK ZONES ═══════════ -->
-    <section class="py-24 bg-dark-800 relative">
+    <section class="py-16 lg:py-20 bg-dark-800 relative">
         <div class="absolute inset-0 bg-mesh opacity-30"></div>
         <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-10 lg:mb-14 animate-on-scroll">
                 <span class="section-label">Для профессионалов</span>
                 <h2 class="text-display-sm lg:text-display font-bold mb-4">Пространство для работы</h2>
                 <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Созданы специальные зоны для продуктивной работы</p>
@@ -273,8 +273,8 @@
 
             <div class="mt-16 grid md:grid-cols-2 gap-8">
                 <div class="animate-on-scroll">
-                    <div class="img-zoom aspect-[16/9]">
-                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80&auto=format" alt="Рабочая зона" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[16/9]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=600&q=80&auto=format" alt="Рабочая зона" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=71'; this.onerror=null;" />
                     </div>
                     <div class="mt-4">
                         <h4 class="font-semibold text-cream-100 mb-2">Индивидуальные рабочие места</h4>
@@ -282,8 +282,8 @@
                     </div>
                 </div>
                 <div class="animate-on-scroll" data-delay="1">
-                    <div class="img-zoom aspect-[16/9]">
-                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80&auto=format" alt="Коворкинг" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[16/9]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80&auto=format" alt="Коворкинг" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=72'; this.onerror=null;" />
                     </div>
                     <div class="mt-4">
                         <h4 class="font-semibold text-cream-100 mb-2">Коворкинг зона</h4>
@@ -295,36 +295,36 @@
     </section>
 
     <!-- ═══════════ LIVE MOMENTS ═══════════ -->
-    <section class="py-24 bg-dark-900">
+    <section class="py-16 lg:py-20 bg-dark-900">
         <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
+            <div class="text-center mb-10 lg:mb-14 animate-on-scroll">
                 <span class="section-label">Живая энергия</span>
                 <h2 class="text-display-sm lg:text-display font-bold mb-4">Живые моменты</h2>
                 <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Настоящие эмоции наших гостей</p>
             </div>
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                <div class="img-zoom aspect-[3/4] col-span-2 row-span-2 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=800&q=80&auto=format" alt="Друзья за кофе" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-[3/4] col-span-2 row-span-2 animate-on-scroll" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=800&q=80&auto=format" alt="Друзья за кофе" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/800/600?random=73'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="1">
-                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&q=80&auto=format" alt="Латте арт" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="1" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&q=80&auto=format" alt="Латте арт" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=74'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="2">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=400&q=80&auto=format" alt="Чтение за кофе" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="2" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=400&q=80&auto=format" alt="Чтение за кофе" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=75'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="3">
-                    <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=400&q=80&auto=format" alt="Обжарка" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="3" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=400&q=80&auto=format" alt="Обжарка" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=76'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="4">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80&auto=format" alt="Интерьер" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="4" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80&auto=format" alt="Интерьер" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/300?random=77'; this.onerror=null;" />
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ═══════════ CTA ═══════════ -->
-    <section class="py-32 bg-dark-800 relative overflow-hidden">
+    <section class="py-20 lg:py-24 bg-dark-800 relative overflow-hidden">
         <div class="absolute inset-0 bg-mesh opacity-80"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-copper-400/5 blur-3xl"></div>
         <div class="relative z-10 max-w-narrow mx-auto px-6 text-center animate-on-scroll">

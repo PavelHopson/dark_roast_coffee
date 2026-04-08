@@ -59,11 +59,12 @@
     </header>
 
     <!-- ═══════════ HERO ═══════════ -->
-    <section class="relative min-h-screen flex items-end pb-24 lg:pb-32 overflow-hidden">
-        <!-- Background -->
-        <div class="absolute inset-0">
+    <section class="relative min-h-[90vh] flex items-end pb-16 lg:pb-24 overflow-hidden">
+        <!-- Background with fallback -->
+        <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a0e08 0%, #2c1810 40%, #0d0d0d 100%);">
             <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920&q=80&auto=format"
-                 alt="Coffee beans" class="w-full h-full object-cover" />
+                 alt="" class="w-full h-full object-cover"
+                 onerror="this.style.display='none'" />
             <div class="hero-gradient absolute inset-0"></div>
         </div>
 
@@ -98,7 +99,7 @@
     </section>
 
     <!-- ═══════════ STATS STRIP ═══════════ -->
-    <section class="py-16 bg-dark-800 border-y border-white/5">
+    <section class="py-10 lg:py-14 bg-dark-800 border-y border-white/5">
         <div class="max-w-content mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 <div class="animate-on-scroll" data-delay="1">
@@ -122,7 +123,7 @@
     </section>
 
     <!-- ═══════════ FEATURED COFFEES ═══════════ -->
-    <section class="py-24 bg-dark-900 bg-mesh relative grain">
+    <section class="py-16 lg:py-20 bg-dark-900 bg-mesh relative grain">
         <div class="max-w-content mx-auto px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-on-scroll">
                 <span class="section-label">Сезонные предложения</span>
@@ -135,8 +136,8 @@
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Card 1 -->
                 <div class="card animate-on-scroll" data-delay="1">
-                    <div class="img-zoom aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Эфиопия Йиргачеффе" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Эфиопия Йиргачеффе" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=1'; this.onerror=null;" />
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -162,8 +163,8 @@
 
                 <!-- Card 2 -->
                 <div class="card animate-on-scroll" data-delay="2">
-                    <div class="img-zoom aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Колумбия Уила" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="Колумбия Уила" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=2'; this.onerror=null;" />
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -189,8 +190,8 @@
 
                 <!-- Card 3 -->
                 <div class="card animate-on-scroll" data-delay="3">
-                    <div class="img-zoom aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Гватемала Антигуа" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Гватемала Антигуа" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/600/450?random=3'; this.onerror=null;" />
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -222,7 +223,7 @@
     </section>
 
     <!-- ═══════════ CRAFTSMANSHIP ═══════════ -->
-    <section class="py-24 bg-dark-800">
+    <section class="py-16 lg:py-20 bg-dark-800">
         <div class="max-w-content mx-auto px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <!-- Text -->
@@ -276,10 +277,10 @@
                 <div class="fade-right relative">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="img-zoom aspect-[3/4]">
-                            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="Бариста" class="w-full h-full object-cover" loading="lazy" />
+                            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80" alt="Бариста" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/533?random=4'; this.onerror=null;" />
                         </div>
                         <div class="img-zoom aspect-[3/4] mt-12">
-                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Латте арт" class="w-full h-full object-cover" loading="lazy" />
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt="Латте арт" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/533?random=5'; this.onerror=null;" />
                         </div>
                     </div>
                     <!-- Floating badge -->
@@ -293,7 +294,7 @@
     </section>
 
     <!-- ═══════════ ATMOSPHERE PREVIEW ═══════════ -->
-    <section class="py-24 bg-dark-900">
+    <section class="py-16 lg:py-20 bg-dark-900">
         <div class="max-w-content mx-auto px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll">
                 <span class="section-label">Наше пространство</span>
@@ -301,20 +302,20 @@
             </div>
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                <div class="img-zoom aspect-[3/4] col-span-2 row-span-2 animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="Интерьер кофейни" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-[3/4] col-span-2 row-span-2 animate-on-scroll" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&q=80" alt="Интерьер кофейни" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/800/1067?random=10'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="1">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80" alt="Детали интерьера" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="1" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80" alt="Детали интерьера" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/400?random=11'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="2">
-                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&q=80" alt="Чашка кофе" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="2" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&q=80" alt="Чашка кофе" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/400?random=12'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="3">
-                    <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=400&q=80" alt="Обжарка" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="3" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1559305616-3f99cd43e353?w=400&q=80" alt="Обжарка" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/400?random=13'; this.onerror=null;" />
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="4">
-                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=400&q=80" alt="Вечерняя атмосфера" class="w-full h-full object-cover" loading="lazy" />
+                <div class="img-zoom aspect-square animate-on-scroll" data-delay="4" style="background:#2a1f18;">
+                    <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=400&q=80" alt="Вечерняя атмосфера" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://picsum.photos/400/400?random=14'; this.onerror=null;" />
                 </div>
             </div>
 
@@ -325,7 +326,7 @@
     </section>
 
     <!-- ═══════════ TESTIMONIALS ═══════════ -->
-    <section class="py-24 bg-dark-800 bg-mesh">
+    <section class="py-16 lg:py-20 bg-dark-800 bg-mesh">
         <div class="max-w-content mx-auto px-6 lg:px-8">
             <div class="text-center mb-16 animate-on-scroll">
                 <span class="section-label">Отзывы</span>
@@ -385,7 +386,7 @@
     </section>
 
     <!-- ═══════════ CTA SECTION ═══════════ -->
-    <section class="py-32 bg-dark-900 relative overflow-hidden">
+    <section class="py-20 lg:py-24 bg-dark-900 relative overflow-hidden">
         <div class="absolute inset-0 bg-mesh opacity-80"></div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-copper-400/5 blur-3xl"></div>
 

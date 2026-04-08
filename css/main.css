@@ -1333,6 +1333,10 @@ input:focus, select:focus, textarea:focus{
   height: 100%;
 }
 
+.min-h-\[90vh\]{
+  min-height: 90vh;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -1786,6 +1790,11 @@ input:focus, select:focus, textarea:focus{
   padding-bottom: 0.25rem;
 }
 
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -1796,19 +1805,14 @@ input:focus, select:focus, textarea:focus{
   padding-bottom: 0.5rem;
 }
 
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.py-32{
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 }
 
 .py-4{
@@ -1824,6 +1828,10 @@ input:focus, select:focus, textarea:focus{
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
 }
 
 .pb-20{
@@ -2408,6 +2416,10 @@ input:focus, select:focus, textarea:focus{
     grid-column: span 2 / span 2;
   }
 
+  .lg\:mb-14{
+    margin-bottom: 3.5rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -2447,6 +2459,25 @@ input:focus, select:focus, textarea:focus{
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-14{
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:pb-24{
+    padding-bottom: 6rem;
   }
 
   .lg\:pb-32{
