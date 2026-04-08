@@ -1,117 +1,161 @@
-<p align="center">
-  <img src="./dark-roast-banner.svg" width="100%" alt="Dark Roast Coffee">
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/Tailwind_CSS_3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
-  <img src="https://img.shields.io/badge/Responsive-4CAF50?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Responsive">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
-</p>
+# ☕ Dark Roast Coffee
 
-# Dark Roast Coffee
+### Премиальный лендинг кофейни в тёмной стилистике
 
-Премиальный многостраничный сайт кофейни в темной стилистике. Разработан на чистом HTML5 + Tailwind CSS с акцентом на атмосферу, минимализм и адаптивный дизайн. Готов к продакшену.
+[![Демо](https://img.shields.io/badge/ДЕМО-dark--roast--coffee.pages.dev-D4956B?style=for-the-badge&logo=cloudflarepages&logoColor=white)](https://dark-roast-coffee.pages.dev/pages/homepage.html)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 
----
-
-## Pages
-
-| Страница | Файл | Описание |
-|----------|------|----------|
-| Homepage | `pages/homepage.html` | Главная страница с hero-секцией, навигацией и ключевыми блоками |
-| Menu Experience | `pages/menu_experience.html` | Интерактивное меню с категориями напитков и десертов |
-| Our Philosophy | `pages/our_philosophy.html` | Философия бренда, история и ценности кофейни |
-| Atmosphere Gallery | `pages/atmosphere_gallery.html` | Галерея атмосферы заведения с фотографиями интерьера |
-| Reservation System | `pages/reservation_system.html` | Система бронирования столиков с формой и выбором времени |
-| Coffee Education | `pages/coffee_education_center.html` | Образовательный раздел: мастер-классы, способы заваривания |
+</div>
 
 ---
 
-## Tech Stack
+## О проекте
 
-- **HTML5** -- семантическая верстка, доступность
-- **Tailwind CSS 3.4** -- утилитарный CSS-фреймворк с кастомной конфигурацией
-- **Кастомная палитра** -- тёмные тона, кофейные акценты, золотые детали
-- **Шрифты** -- Playfair Display, Source Sans Pro, Crimson Text, Montserrat
-- **Адаптивный дизайн** -- от мобильных устройств до 4K-мониторов
+**Dark Roast Coffee** — многостраничный лендинг премиальной кофейни с полностью тёмным дизайном, медными/янтарными акцентами и современными CSS-эффектами.
+
+**[→ Открыть демо](https://dark-roast-coffee.pages.dev/pages/homepage.html)**
 
 ---
 
-## Quick Start
+## Страницы
+
+| Страница | Описание |
+|----------|----------|
+| [Homepage](https://dark-roast-coffee.pages.dev/pages/homepage.html) | Герой-секция, статистика, карточки кофе, мастерство, галерея, отзывы, CTA |
+| [Menu](https://dark-roast-coffee.pages.dev/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
+| [Philosophy](https://dark-roast-coffee.pages.dev/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
+| [Atmosphere](https://dark-roast-coffee.pages.dev/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |
+| [Reservation](https://dark-roast-coffee.pages.dev/pages/reservation_system.html) | Форма бронирования с валидацией, выбором времени, добавками, модальным подтверждением |
+| [Education](https://dark-roast-coffee.pages.dev/pages/coffee_education_center.html) | Гайды по завариванию, истории происхождения, кофейный квиз |
+
+---
+
+## Дизайн-система
+
+### Цветовая палитра
+```
+Фон:     #0D0D0D → #141414 → #1A1A1A → #222222
+Акцент:  #D4956B → #E8B882 (медный/янтарный)
+Текст:   #FFFCF9 → #F5E6D3 → #D4C0A8 → #B8A68E (кремовый)
+```
+
+### Типографика
+- **Playfair Display** — заголовки (serif, элегантный)
+- **Source Sans Pro** — основной текст (sans-serif, читаемый)
+- **Montserrat** — кнопки и лейблы (CTA)
+- **Crimson Text** — цитаты и акцентный текст
+
+### Компоненты
+- `card` — тёмные карты с медной подсветкой при hover
+- `card-feature` — с градиентной линией сверху
+- `card-glass` — glassmorphism с backdrop-blur
+- `btn-primary` — градиент + glow + подъём при hover
+- `img-zoom` — плавный zoom изображений
+- `text-gradient` — переливающийся медный текст
+- `bg-mesh` — тёплые gradient mesh фоны
+- `section-label` — мелкий uppercase медный текст
+
+### Анимации
+- Scroll-triggered fade-in/up с IntersectionObserver
+- Staggered delays для каскадного появления карточек
+- Fade-left/right для двухколоночных макетов
+- Hero gradient overlay на фоновом изображении
+- Карточки с translateY + shadow при hover
+
+---
+
+## Интерактивность (JavaScript)
+
+| Функция | Описание |
+|---------|----------|
+| Модальные окна | Заменяют alert() — подтверждение бронирования, корзина |
+| Toast-уведомления | Success/error/info при действиях |
+| Lightbox | Клик по фото → полноэкранный просмотр (Esc для закрытия) |
+| Фильтры меню | Реальная фильтрация карточек с анимацией |
+| Корзина | localStorage persistence + badge счётчик |
+| Форма бронирования | Валидация + loading state + success modal |
+| Кофейный квиз | Результаты с emoji, уровнями и progress bar |
+| Навигация | Scroll-эффект хедера (blur + тёмный фон) |
+| Галерея | Табы утро/день/вечер с плавными переходами |
+
+---
+
+## Стек
+
+| Технология | Роль |
+|-----------|------|
+| HTML5 | Семантическая вёрстка |
+| Tailwind CSS 3.4 | Утилитарные стили + кастомная тема |
+| Vanilla JS | Интерактивность без зависимостей |
+| Pexels | Фотографии (бесплатно, без ограничений) |
+| Cloudflare Pages | Хостинг + CDN |
+
+---
+
+## Быстрый старт
 
 ```bash
-# Установить зависимости
+git clone https://github.com/PavelHopson/dark_roast_coffee.git
+cd dark_roast_coffee
 npm install
-
-# Собрать CSS
 npm run build:css
-
-# Открыть сайт
-open index.html
+# Открыть pages/homepage.html в браузере
 ```
 
-Для режима разработки с автопересборкой:
-
+Режим разработки:
 ```bash
-npm run dev
+npm run dev  # watch mode — автопересборка CSS
 ```
 
 ---
 
-## Project Structure
+## Структура проекта
 
 ```
 dark_roast_coffee/
 ├── css/
-│   ├── tailwind.css          # Исходный Tailwind + кастомные утилиты
+│   ├── tailwind.css          # Исходный CSS + кастомные компоненты
 │   └── main.css              # Скомпилированный CSS
-├── pages/                    # HTML-страницы сайта
-│   ├── homepage.html
-│   ├── menu_experience.html
-│   ├── our_philosophy.html
-│   ├── atmosphere_gallery.html
-│   ├── reservation_system.html
-│   └── coffee_education_center.html
-├── public/                   # Статические ресурсы
-├── index.html                # Точка входа (редирект на homepage)
-├── tailwind.config.js        # Конфигурация Tailwind CSS
-└── package.json              # Зависимости и скрипты
+├── js/
+│   └── main.js               # Вся интерактивность
+├── pages/
+│   ├── homepage.html          # Главная
+│   ├── menu_experience.html   # Меню
+│   ├── our_philosophy.html    # Философия
+│   ├── atmosphere_gallery.html # Галерея
+│   ├── reservation_system.html # Бронирование
+│   └── coffee_education_center.html # Обучение
+├── public/                    # Favicon, manifest
+├── index.html                 # Редирект на homepage
+├── tailwind.config.js         # Тема: цвета, шрифты, тени
+└── package.json
 ```
 
 ---
 
-## Screenshots
+## Деплой
 
-Главная страница
+### Cloudflare Pages
+```bash
+npx wrangler pages deploy . --project-name=dark-roast-coffee
+```
 
-<img width="928" height="556" alt="Homepage" src="https://github.com/user-attachments/assets/bf5ff7af-1ef8-4942-aa59-a8d0570c0f46" />
-
-Меню
-
-<img width="929" height="854" alt="Menu" src="https://github.com/user-attachments/assets/e2bb146b-cf57-4b1a-b04a-d6ce25757dfb" />
-<img width="783" height="921" alt="Menu cards" src="https://github.com/user-attachments/assets/a5953899-ef9c-41c2-9416-912ccd252dc5" />
-<img width="781" height="891" alt="Menu details" src="https://github.com/user-attachments/assets/22f353c1-b020-43a7-88dc-1c8d797f19bb" />
-
-Философия
-
-<img width="952" height="855" alt="Philosophy" src="https://github.com/user-attachments/assets/ecb878f0-4e0f-416e-9555-ced7abe74307" />
-<img width="911" height="510" alt="Philosophy section" src="https://github.com/user-attachments/assets/9f41ac39-2aba-4dca-9dad-8056f67c9e7a" />
-<img width="814" height="823" alt="Philosophy details" src="https://github.com/user-attachments/assets/277074c0-86f7-4f04-b317-f96f00c4a618" />
-<img width="781" height="923" alt="Philosophy values" src="https://github.com/user-attachments/assets/e0bea6e5-6308-4f23-8aa1-c8e1d67c58a4" />
-
-Атмосфера
-
-<img width="1155" height="885" alt="Atmosphere gallery" src="https://github.com/user-attachments/assets/fb8275e5-f062-44cd-937c-dc9c6d8f9b5c" />
-<img width="405" height="709" alt="Atmosphere mobile" src="https://github.com/user-attachments/assets/f481670a-745e-4073-ba00-b2a43d3fafa6" />
-
-Бронирование
-
-<img width="583" height="910" alt="Reservation form" src="https://github.com/user-attachments/assets/197439f3-97e1-42d9-aa71-00ae3043c33c" />
-<img width="607" height="631" alt="Reservation confirmation" src="https://github.com/user-attachments/assets/007f3cd8-668e-4d9e-8a35-fb01b8b5cf53" />
+### GitHub Pages
+Автоматически из ветки `main`.
 
 ---
 
-## License
+## Лицензия
 
-[MIT](./LICENSE) -- 2025 PavelHopson
+[MIT](LICENSE)
+
+---
+
+<div align="center">
+<sub>Сделано с ☕ в Eclipse Forge</sub>
+</div>
