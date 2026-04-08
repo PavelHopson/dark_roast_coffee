@@ -1736,11 +1736,6 @@ input:focus, select:focus, textarea:focus{
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -1896,8 +1891,23 @@ input:focus, select:focus, textarea:focus{
   line-height: 2.25rem;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-6xl{
   font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl{
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl{
+  font-size: 6rem;
   line-height: 1;
 }
 
@@ -2035,6 +2045,14 @@ input:focus, select:focus, textarea:focus{
   opacity: 0;
 }
 
+.opacity-15{
+  opacity: 0.15;
+}
+
+.opacity-20{
+  opacity: 0.2;
+}
+
 .opacity-30{
   opacity: 0.3;
 }
@@ -2103,12 +2121,6 @@ input:focus, select:focus, textarea:focus{
 
 .transition-opacity{
   transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.transition-transform{
-  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -2359,12 +2371,6 @@ input:focus, select:focus, textarea:focus{
 .focus\:ring-copper-400:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(212 149 107 / var(--tw-ring-opacity, 1));
-}
-
-.group:hover .group-hover\:scale-110{
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .group:hover .group-hover\:border-copper-400\/40{

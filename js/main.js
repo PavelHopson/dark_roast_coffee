@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Observe all animated elements
-  document.querySelectorAll('.animate-on-scroll, .animate-fade-left, .animate-fade-right, .animate-scale-in').forEach(el => {
+  document.querySelectorAll('.animate-on-scroll, .animate-fade-left, .animate-fade-right, .animate-scale-in, .fade-left, .fade-right, .scale-in').forEach(el => {
     animationObserver.observe(el);
   });
 

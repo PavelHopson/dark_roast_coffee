@@ -60,11 +60,8 @@
 
     <!-- ═══════════ HERO ═══════════ -->
     <section class="relative min-h-[90vh] flex items-end pb-16 lg:pb-24 overflow-hidden">
-        <!-- Background with fallback -->
-        <div class="absolute inset-0" style="background: linear-gradient(135deg, #1a0e08 0%, #2c1810 40%, #0d0d0d 100%);">
-            <img src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1920"
-                 alt="" class="w-full h-full object-cover"
-                 onerror="this.style.display='none'" />
+        <!-- Background — gradient since external images may be blocked -->
+        <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 50%, #3d2010 0%, #1a0e08 40%, #0d0d0d 80%);">
             <div class="hero-gradient absolute inset-0"></div>
         </div>
 
@@ -136,8 +133,8 @@
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Card 1 -->
                 <div class="card animate-on-scroll" data-delay="1">
-                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
-                        <img src="https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Эфиопия Йиргачеффе" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="aspect-[4/3] rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #3d2010 0%, #2a1508 100%);">
+                        <span class="text-6xl opacity-30">☕</span>
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -163,8 +160,8 @@
 
                 <!-- Card 2 -->
                 <div class="card animate-on-scroll" data-delay="2">
-                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
-                        <img src="https://images.pexels.com/photos/585753/pexels-photo-585753.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Колумбия Уила" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="aspect-[4/3] rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #2c1810 0%, #1a0e08 100%);">
+                        <span class="text-6xl opacity-30">🫘</span>
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -190,8 +187,8 @@
 
                 <!-- Card 3 -->
                 <div class="card animate-on-scroll" data-delay="3">
-                    <div class="img-zoom aspect-[4/3]" style="background:#2a1f18;">
-                        <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Гватемала Антигуа" class="w-full h-full object-cover" loading="lazy" />
+                    <div class="aspect-[4/3] rounded-2xl flex items-center justify-center" style="background: linear-gradient(135deg, #35200e 0%, #1f1208 100%);">
+                        <span class="text-6xl opacity-30">🍵</span>
                     </div>
                     <div class="p-6 lg:p-8">
                         <div class="flex items-center gap-2 mb-3">
@@ -276,11 +273,11 @@
                 <!-- Images -->
                 <div class="fade-right relative">
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="img-zoom aspect-[3/4]">
-                            <img src="https://images.pexels.com/photos/3020919/pexels-photo-3020919.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Бариста" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="aspect-[3/4] rounded-2xl flex items-center justify-center" style="background: linear-gradient(180deg, #3d2010 0%, #1a0e08 100%);">
+                            <span class="text-7xl opacity-20">👨‍🍳</span>
                         </div>
-                        <div class="img-zoom aspect-[3/4] mt-12">
-                            <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Латте арт" class="w-full h-full object-cover" loading="lazy" />
+                        <div class="aspect-[3/4] rounded-2xl mt-12 flex items-center justify-center" style="background: linear-gradient(180deg, #2c1810 0%, #1a0e08 100%);">
+                            <span class="text-7xl opacity-20">🎨</span>
                         </div>
                     </div>
                     <!-- Floating badge -->
@@ -302,20 +299,20 @@
             </div>
 
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                <div class="img-zoom aspect-[3/4] col-span-2 row-span-2 animate-on-scroll" style="background:#2a1f18;">
-                    <img src="https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Интерьер кофейни" class="w-full h-full object-cover" loading="lazy" />
+                <div class="aspect-[3/4] col-span-2 row-span-2 rounded-2xl animate-on-scroll flex items-center justify-center" style="background: linear-gradient(160deg, #3d2010, #1a0e08);">
+                    <div class="text-center"><span class="text-8xl opacity-20">🏠</span><p class="text-cream-500 text-sm mt-2 opacity-40">Интерьер</p></div>
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="1" style="background:#2a1f18;">
-                    <img src="https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Детали интерьера" class="w-full h-full object-cover" loading="lazy" />
+                <div class="aspect-square rounded-2xl animate-on-scroll flex items-center justify-center" data-delay="1" style="background: linear-gradient(135deg, #2c1810, #1a0a05);">
+                    <span class="text-5xl opacity-20">🪑</span>
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="2" style="background:#2a1f18;">
-                    <img src="https://images.pexels.com/photos/414720/pexels-photo-414720.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Чашка кофе" class="w-full h-full object-cover" loading="lazy" />
+                <div class="aspect-square rounded-2xl animate-on-scroll flex items-center justify-center" data-delay="2" style="background: linear-gradient(135deg, #35200e, #1a0e08);">
+                    <span class="text-5xl opacity-20">☕</span>
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="3" style="background:#2a1f18;">
-                    <img src="https://images.pexels.com/photos/2074122/pexels-photo-2074122.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Обжарка" class="w-full h-full object-cover" loading="lazy" />
+                <div class="aspect-square rounded-2xl animate-on-scroll flex items-center justify-center" data-delay="3" style="background: linear-gradient(135deg, #3d2a15, #1f1208);">
+                    <span class="text-5xl opacity-20">🔥</span>
                 </div>
-                <div class="img-zoom aspect-square animate-on-scroll" data-delay="4" style="background:#2a1f18;">
-                    <img src="https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Вечерняя атмосфера" class="w-full h-full object-cover" loading="lazy" />
+                <div class="aspect-square rounded-2xl animate-on-scroll flex items-center justify-center" data-delay="4" style="background: linear-gradient(135deg, #2a1f18, #0d0d0d);">
+                    <span class="text-5xl opacity-20">🌙</span>
                 </div>
             </div>
 
