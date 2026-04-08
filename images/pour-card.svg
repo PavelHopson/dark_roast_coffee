@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#35200e"/>
+      <stop offset="100%" stop-color="#1f1208"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Pour over / kettle -->
+  <g transform="translate(300, 220)" opacity="0.15" fill="none" stroke="#D4956B" stroke-width="3">
+    <!-- Kettle body -->
+    <path d="M-40 -20 Q-40 -60 0 -60 Q40 -60 40 -20 L40 20 Q40 40 0 40 Q-40 40 -40 20 Z"/>
+    <!-- Spout -->
+    <path d="M40 -10 Q70 -30 60 -60"/>
+    <!-- Handle -->
+    <path d="M-40 -10 Q-70 -10 -70 20 Q-70 40 -40 40"/>
+    <!-- Pour stream -->
+    <path d="M60 -60 Q58 -40 62 0 Q65 40 60 80" stroke-dasharray="4,4" opacity="0.5"/>
+    <!-- Cup below -->
+    <ellipse cx="60" cy="100" rx="30" ry="10"/>
+    <path d="M30 100 L35 130 Q60 140 85 130 L90 100"/>
+  </g>
+</svg>

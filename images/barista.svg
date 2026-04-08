@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d2010"/>
+      <stop offset="100%" stop-color="#1a0e08"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <g transform="translate(300, 380)" opacity="0.12" stroke="#D4956B" stroke-width="2.5" fill="none">
+    <!-- Person silhouette -->
+    <circle cx="0" cy="-120" r="35"/>
+    <path d="M-40 -85 Q-60 -40 -50 20 L-30 120"/>
+    <path d="M40 -85 Q60 -40 50 20 L30 120"/>
+    <path d="M-30 120 Q0 140 30 120"/>
+    <!-- Apron -->
+    <path d="M-35 -20 L-30 80 Q0 100 30 80 L35 -20" stroke-dasharray="5,3"/>
+    <!-- Arm holding portafilter -->
+    <path d="M-50 0 Q-80 20 -90 60"/>
+    <circle cx="-95" cy="65" r="15"/>
+    <path d="M50 10 Q70 40 60 80"/>
+  </g>
+</svg>

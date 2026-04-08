@@ -1736,6 +1736,11 @@ input:focus, select:focus, textarea:focus{
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-2{
   padding: 0.5rem;
 }
@@ -1903,11 +1908,6 @@ input:focus, select:focus, textarea:focus{
 
 .text-7xl{
   font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-8xl{
-  font-size: 6rem;
   line-height: 1;
 }
 

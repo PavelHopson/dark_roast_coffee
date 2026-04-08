@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3d2010"/>
+      <stop offset="100%" stop-color="#1a0e08"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="url(#bg)"/>
+  <!-- Coffee cup -->
+  <g transform="translate(300, 200)" opacity="0.15">
+    <ellipse cx="0" cy="0" rx="60" ry="20" fill="#D4956B"/>
+    <path d="M-60 0 L-50 80 Q0 100 50 80 L60 0" fill="none" stroke="#D4956B" stroke-width="3"/>
+    <path d="M60 10 Q90 10 90 40 Q90 60 60 60" fill="none" stroke="#D4956B" stroke-width="3"/>
+    <!-- Steam -->
+    <path d="M-15 -20 Q-20 -50 -10 -70" fill="none" stroke="#D4956B" stroke-width="2" opacity="0.6"/>
+    <path d="M5 -25 Q0 -55 10 -75" fill="none" stroke="#D4956B" stroke-width="2" opacity="0.6"/>
+    <path d="M20 -18 Q25 -48 15 -68" fill="none" stroke="#D4956B" stroke-width="2" opacity="0.6"/>
+  </g>
+</svg>
