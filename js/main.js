@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const animationObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate-visible');
+        entry.target.classList.add('visible');
         animationObserver.unobserve(entry.target);
       }
     });

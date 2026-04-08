@@ -3,939 +3,473 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Центр Кофейного Образования - Dark Roast Coffee</title>
-    <meta name="description" content="Изучайте искусство кофе с экспертами Dark Roast Coffee. Гиды по завариванию, истории происхождения, дегустационные заметки и эксклюзивные интервью." />
+    <title>Обучение — Dark Roast Coffee</title>
+    <meta name="description" content="Образовательный центр Dark Roast Coffee. Гиды по завариванию, истории происхождения и кофейный тест." />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="../public/favicon.ico" />
 </head>
-<body class="bg-background text-text-primary">
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-sticky bg-white bg-opacity-95 backdrop-blur-sm shadow-card transition-all duration-300">
-        <nav class="max-w-content mx-auto px-6 py-4">
+<body>
+
+    <!-- ═══════════ NAVIGATION ═══════════ -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="main-header">
+        <nav class="max-w-content mx-auto px-6 lg:px-8 py-5">
             <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <svg class="w-10 h-10 text-accent" viewBox="0 0 40 40" fill="currentColor">
-                        <circle cx="20" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8v8c0 2.2-1.8 4-4 4h-8c-2.2 0-4-1.8-4-4v-8z" fill="currentColor" opacity="0.8"/>
-                        <circle cx="16" cy="16" r="1.5" fill="white"/>
-                        <circle cx="24" cy="16" r="1.5" fill="white"/>
-                    </svg>
-                    <span class="font-serif text-xl font-semibold text-primary">Dark Roast Coffee</span>
+                <a href="homepage.html" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-copper-400/10 flex items-center justify-center border border-copper-400/20 group-hover:border-copper-400/40 transition-colors">
+                        <svg class="w-5 h-5 text-copper-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21V17C2 14.2 4.2 12 7 12H11V8H9C8.4 8 8 7.6 8 7V3C8 2.4 8.4 2 9 2H15C15.6 2 16 2.4 16 3V7C16 7.6 15.6 8 15 8H13V12H17C19.8 12 22 14.2 22 17V21H2Z"/></svg>
+                    </div>
+                    <span class="font-display text-lg text-cream-100 font-semibold">Dark Roast</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="menu_experience.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Меню</a>
+                    <a href="our_philosophy.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Философия</a>
+                    <a href="atmosphere_gallery.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Атмосфера</a>
+                    <a href="coffee_education_center.html" class="text-copper-300 text-sm font-medium">Обучение</a>
                 </div>
-                
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Главная</a>
-                    <a href="menu_experience.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Меню</a>
-                    <a href="our_philosophy.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Наша Философия</a>
-                    <a href="atmosphere_gallery.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Атмосфера</a>
-                    <a href="reservation_system.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Бронирование</a>
-                    <a href="coffee_education_center.html" class="text-accent font-semibold">Обучение</a>
-                </div>
-                
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="reservation_system.html" class="btn-primary">Забронировать</a>
-                </div>
-                
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-primary" id="mobile-menu-btn">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+                <div class="hidden lg:block"><a href="reservation_system.html" class="btn-primary btn-sm">Забронировать</a></div>
+                <button class="lg:hidden text-cream-200 p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
-            
-            <!-- Mobile Menu -->
-            <div class="md:hidden hidden mt-4 pb-4 border-t border-border" id="mobile-menu">
-                <div class="flex flex-col space-y-4 pt-4">
-                    <a href="homepage.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Главная</a>
-                    <a href="menu_experience.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Меню</a>
-                    <a href="our_philosophy.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Наша Философия</a>
-                    <a href="atmosphere_gallery.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Атмосфера</a>
-                    <a href="reservation_system.html" class="text-text-secondary hover:text-accent transition-fast font-medium">Бронирование</a>
-                    <a href="coffee_education_center.html" class="text-accent font-semibold">Обучение</a>
-                    <a href="reservation_system.html" class="btn-primary mt-4">Забронировать</a>
+            <div class="lg:hidden hidden mt-6 pb-4" id="mobile-menu">
+                <div class="flex flex-col gap-4 card-glass p-6">
+                    <a href="menu_experience.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Меню</a>
+                    <a href="our_philosophy.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Философия</a>
+                    <a href="atmosphere_gallery.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Атмосфера</a>
+                    <a href="coffee_education_center.html" class="text-copper-300 font-medium py-2">Обучение</a>
+                    <a href="reservation_system.html" class="btn-primary text-center mt-2">Забронировать</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-16 bg-gradient-to-br from-primary to-secondary text-white">
-        <div class="max-w-content mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="relative pt-32 pb-24 bg-dark-900 overflow-hidden">
+        <div class="absolute inset-0 bg-mesh opacity-40"></div>
+        <div class="grain"></div>
+        <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h1 class="font-serif text-hero md:text-6xl font-bold mb-6 fade-in">
-                        Центр Кофейного Образования
+                    <span class="section-label">Образовательный центр</span>
+                    <h1 class="font-display text-hero-sm lg:text-hero text-cream-50 font-bold mb-6">
+                        Мир кофе<br/><span class="text-gradient">без границ</span>
                     </h1>
-                    <p class="text-body-lg mb-8 opacity-90 fade-in" style="animation-delay: 0.2s;">
-                        Погрузитесь в мир кофе с нашими экспертными гидами, эксклюзивными интервью и интерактивными материалами. 
-                        Станьте настоящим ценителем кофе вместе с Dark Roast Coffee.
+                    <p class="text-body-lg text-cream-400 mb-10">
+                        Откройте секреты приготовления идеального кофе с нашими экспертами, мастер-классами и интерактивными гидами
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 fade-in" style="animation-delay: 0.4s;">
-                        <a href="#brewing-guides" class="btn-primary bg-accent text-primary">Начать обучение</a>
-                        <a href="#coffee-quiz" class="btn-secondary border-white text-white hover:bg-white hover:text-primary">Пройти тест</a>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#brewing-guides" class="btn-primary">Начать обучение</a>
+                        <a href="#coffee-quiz" class="btn-secondary">Пройти тест</a>
                     </div>
                 </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2940&auto=format&fit=crop" alt="Мастер-класс по завариванию кофе" class="w-full h-96 object-cover rounded-lg shadow-modal" loading="lazy" onerror="this.src='https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                    <div class="absolute inset-0 bg-accent bg-opacity-20 rounded-lg"></div>
+                <div class="fade-right">
+                    <div class="img-zoom aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format" alt="Мастер-класс" class="w-full h-full object-cover" loading="lazy" />
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Learning Categories -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Изучайте кофе с экспертами</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Выберите направление обучения и откройте для себя удивительный мир кофе
-                </p>
+    <!-- ═══════════ LEARNING CATEGORIES ═══════════ -->
+    <section class="py-24 bg-dark-800">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="section-label">Направления</span>
+                <h2 class="text-display-sm lg:text-display font-bold mb-4">Изучайте кофе с экспертами</h2>
+                <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Выберите направление обучения и откройте для себя удивительный мир кофе</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Brewing Guides -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Гиды по завариванию</h3>
-                    <p class="text-text-secondary mb-6">Пошаговые инструкции для всех методов приготовления кофе дома</p>
-                    <a href="#brewing-guides" class="btn-secondary text-sm">12 методов</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Гиды по завариванию</h3>
+                    <p class="text-cream-400 text-sm mb-6">Пошаговые инструкции для всех методов приготовления кофе дома</p>
+                    <a href="#brewing-guides" class="btn-secondary btn-sm">12 методов</a>
                 </div>
-                
-                <!-- Origin Stories -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center" data-delay="1">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Истории происхождения</h3>
-                    <p class="text-text-secondary mb-6">Путешествие по кофейным регионам мира с климатическими данными</p>
-                    <a href="#origin-stories" class="btn-secondary text-sm">15 регионов</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Истории происхождения</h3>
+                    <p class="text-cream-400 text-sm mb-6">Путешествие по кофейным регионам мира с климатическими данными</p>
+                    <a href="#origin-stories" class="btn-secondary btn-sm">15 регионов</a>
                 </div>
-                
-                <!-- Tasting Notes -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center" data-delay="2">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Дегустационные заметки</h3>
-                    <p class="text-text-secondary mb-6">Учитесь определять вкусовые профили как профессиональный каппер</p>
-                    <a href="#tasting-notes" class="btn-secondary text-sm">50+ профилей</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Дегустационные заметки</h3>
+                    <p class="text-cream-400 text-sm mb-6">Учитесь определять вкусовые профили как профессиональный каппер</p>
+                    <a href="#tasting-notes" class="btn-secondary btn-sm">50+ профилей</a>
                 </div>
-                
-                <!-- Equipment Guide -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Оборудование</h3>
-                    <p class="text-text-secondary mb-6">Рекомендации по выбору кофемолок, турок и других устройств</p>
-                    <a href="#equipment-guide" class="btn-secondary text-sm">25 устройств</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Оборудование</h3>
+                    <p class="text-cream-400 text-sm mb-6">Рекомендации по выбору кофемолок, турок и других устройств</p>
+                    <a href="#equipment-guide" class="btn-secondary btn-sm">25 устройств</a>
                 </div>
-                
-                <!-- Food Pairing -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center" data-delay="1">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Сочетания с едой</h3>
-                    <p class="text-text-secondary mb-6">Идеальные комбинации кофе с завтраками, обедами и десертами</p>
-                    <a href="#food-pairing" class="btn-secondary text-sm">30 сочетаний</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Сочетания с едой</h3>
+                    <p class="text-cream-400 text-sm mb-6">Идеальные комбинации кофе с завтраками, обедами и десертами</p>
+                    <a href="#food-pairing" class="btn-secondary btn-sm">30 сочетаний</a>
                 </div>
-                
-                <!-- Coffee Quiz -->
-                <div class="card-elevated animate-on-scroll p-8 text-center group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-accent bg-opacity-10 rounded-lg flex items-center justify-center">
-                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
+                <div class="card-feature animate-on-scroll p-8 text-center" data-delay="2">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-copper-400/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <h3 class="font-serif text-subheading font-semibold mb-4">Кофейный тест</h3>
-                    <p class="text-text-secondary mb-6">Откройте свои вкусовые предпочтения и получите персональные рекомендации</p>
-                    <a href="#coffee-quiz" class="btn-secondary text-sm">Пройти тест</a>
+                    <h3 class="font-display text-lg text-cream-50 font-semibold mb-4">Кофейный тест</h3>
+                    <p class="text-cream-400 text-sm mb-6">Откройте свои вкусовые предпочтения и получите персональные рекомендации</p>
+                    <a href="#coffee-quiz" class="btn-secondary btn-sm">Пройти тест</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Brewing Guides Section -->
-    <section id="brewing-guides" class="py-20 bg-background">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Гиды по завариванию</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Освойте искусство приготовления кофе дома с нашими подробными видео-инструкциями
-                </p>
+    <!-- ═══════════ BREWING GUIDES ═══════════ -->
+    <section id="brewing-guides" class="py-24 bg-dark-900">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="section-label">Практика</span>
+                <h2 class="text-display-sm lg:text-display font-bold mb-4">Гиды по завариванию</h2>
+                <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Освойте искусство приготовления кофе дома</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- V60 Guide -->
-                <div class="card-elevated animate-on-scroll overflow-hidden group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2940&auto=format&fit=crop" alt="Заваривание V60" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <div class="absolute inset-0 bg-primary bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
+                <div class="card animate-on-scroll overflow-hidden group">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format" alt="V60" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                        <div class="absolute inset-0 bg-dark-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-copper-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-subheading font-semibold mb-3">Hario V60</h3>
-                        <p class="text-text-secondary mb-4">Классический метод пуровер для яркого и чистого вкуса</p>
-                        <div class="flex items-center justify-between text-sm text-accent">
+                        <h3 class="font-display text-lg text-cream-50 font-semibold mb-3">Hario V60</h3>
+                        <p class="text-cream-400 text-sm mb-4">Классический метод пуровер для яркого и чистого вкуса</p>
+                        <div class="flex items-center justify-between text-xs text-copper-400 mb-4">
                             <span>Время: 3-4 мин</span>
                             <span>Сложность: Средняя</span>
                         </div>
-                        <div class="mt-4">
-                            <button class="btn-secondary w-full text-sm">Смотреть видео</button>
-                        </div>
+                        <button class="btn-secondary btn-sm w-full">Смотреть видео</button>
                     </div>
                 </div>
-                
-                <!-- French Press Guide -->
-                <div class="card-elevated animate-on-scroll overflow-hidden group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2940&auto=format&fit=crop" alt="Френч-пресс" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg'; this.onerror=null;" />
-                        <div class="absolute inset-0 bg-primary bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
+                <div class="card animate-on-scroll overflow-hidden group" data-delay="1">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80&auto=format" alt="Френч-пресс" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                        <div class="absolute inset-0 bg-dark-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-copper-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-subheading font-semibold mb-3">Френч-пресс</h3>
-                        <p class="text-text-secondary mb-4">Простой способ получить насыщенный и плотный кофе</p>
-                        <div class="flex items-center justify-between text-sm text-accent">
+                        <h3 class="font-display text-lg text-cream-50 font-semibold mb-3">Френч-пресс</h3>
+                        <p class="text-cream-400 text-sm mb-4">Простой способ получить насыщенный и плотный кофе</p>
+                        <div class="flex items-center justify-between text-xs text-copper-400 mb-4">
                             <span>Время: 4 мин</span>
                             <span>Сложность: Легкая</span>
                         </div>
-                        <div class="mt-4">
-                            <button class="btn-secondary w-full text-sm">Смотреть видео</button>
-                        </div>
+                        <button class="btn-secondary btn-sm w-full">Смотреть видео</button>
                     </div>
                 </div>
-                
-                <!-- Aeropress Guide -->
-                <div class="card-elevated animate-on-scroll overflow-hidden group">
-                    <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2787&auto=format&fit=crop" alt="Аэропресс" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <div class="absolute inset-0 bg-primary bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
+                <div class="card animate-on-scroll overflow-hidden group" data-delay="2">
+                    <div class="relative aspect-[16/9] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format" alt="Аэропресс" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+                        <div class="absolute inset-0 bg-dark-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg class="w-12 h-12 text-copper-400" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="font-serif text-subheading font-semibold mb-3">Аэропресс</h3>
-                        <p class="text-text-secondary mb-4">Универсальный метод для экспериментов с рецептами</p>
-                        <div class="flex items-center justify-between text-sm text-accent">
+                        <h3 class="font-display text-lg text-cream-50 font-semibold mb-3">Аэропресс</h3>
+                        <p class="text-cream-400 text-sm mb-4">Универсальный метод для экспериментов с рецептами</p>
+                        <div class="flex items-center justify-between text-xs text-copper-400 mb-4">
                             <span>Время: 2-3 мин</span>
                             <span>Сложность: Средняя</span>
                         </div>
-                        <div class="mt-4">
-                            <button class="btn-secondary w-full text-sm">Смотреть видео</button>
-                        </div>
+                        <button class="btn-secondary btn-sm w-full">Смотреть видео</button>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <p class="text-text-secondary mb-6">Скачайте наши карточки с техниками заваривания для удобного использования дома</p>
+
+            <div class="text-center mt-12 animate-on-scroll">
+                <p class="text-cream-400 mb-6">Скачайте наши карточки с техниками заваривания</p>
                 <button class="btn-primary">Скачать все гиды PDF</button>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Origin Stories Map -->
-    <section id="origin-stories" class="py-20 bg-surface">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Карта происхождения кофе</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Путешествуйте по кофейным регионам мира и узнавайте истории фермеров
-                </p>
+    <!-- ═══════════ ORIGIN STORIES ═══════════ -->
+    <section id="origin-stories" class="py-24 bg-dark-800 relative">
+        <div class="absolute inset-0 bg-mesh opacity-30"></div>
+        <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="section-label">География вкуса</span>
+                <h2 class="text-display-sm lg:text-display font-bold mb-4">Карта происхождения кофе</h2>
+                <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Путешествуйте по кофейным регионам мира</p>
             </div>
-            
-            <!-- Interactive Map Placeholder -->
-            <div class="bg-white rounded-lg shadow-card p-8 mb-12">
-                <div class="relative h-96 bg-gradient-to-br from-accent to-primary rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2940&auto=format&fit=crop" alt="Карта кофейных регионов" class="w-full h-full object-cover opacity-30" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;" />
+
+            <!-- Map Placeholder -->
+            <div class="card p-8 mb-12 animate-on-scroll">
+                <div class="relative aspect-video rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1200&q=80&auto=format" alt="Карта кофейных регионов" class="w-full h-full object-cover opacity-30" loading="lazy" />
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="text-center text-white">
-                            <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                            <h3 class="font-serif text-xl font-semibold mb-2">Интерактивная карта</h3>
-                            <p class="opacity-90">Нажмите на регион, чтобы узнать его историю</p>
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto mb-4 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <h3 class="font-display text-xl text-cream-50 font-semibold mb-2">Интерактивная карта</h3>
+                            <p class="text-cream-400">Нажмите на регион, чтобы узнать его историю</p>
                         </div>
                     </div>
-                    
-                    <!-- Region Markers -->
-                    <div class="absolute top-1/4 left-1/3 w-4 h-4 bg-accent rounded-full animate-pulse cursor-pointer" title="Эфиопия"></div>
-                    <div class="absolute top-2/3 left-1/4 w-4 h-4 bg-accent rounded-full animate-pulse cursor-pointer" title="Колумбия"></div>
-                    <div class="absolute top-1/2 left-1/5 w-4 h-4 bg-accent rounded-full animate-pulse cursor-pointer" title="Гватемала"></div>
-                    <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-accent rounded-full animate-pulse cursor-pointer" title="Кения"></div>
+                    <div class="absolute top-1/4 left-1/3 w-4 h-4 bg-copper-400 rounded-full animate-pulse cursor-pointer" title="Эфиопия"></div>
+                    <div class="absolute top-2/3 left-1/4 w-4 h-4 bg-copper-400 rounded-full animate-pulse cursor-pointer" title="Колумбия"></div>
+                    <div class="absolute top-1/3 right-1/3 w-4 h-4 bg-copper-400 rounded-full animate-pulse cursor-pointer" title="Кения"></div>
                 </div>
             </div>
-            
+
             <!-- Featured Regions -->
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Ethiopia -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=2861&auto=format&fit=crop" alt="Флаг Эфиопии" class="w-8 h-6 object-cover rounded mr-3" loading="lazy" onerror="this.src='https://images.pexels.com/photos/894695/pexels-photo-894695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <h3 class="font-serif text-subheading font-semibold">Эфиопия</h3>
+                <div class="card animate-on-scroll p-6">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-6 rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=100&q=80" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
+                        <h3 class="font-display text-lg text-cream-50 font-semibold">Эфиопия</h3>
                     </div>
-                    <p class="text-text-secondary mb-4">Родина кофе с уникальными дикими сортами и древними традициями обработки</p>
+                    <p class="text-cream-400 text-sm mb-4">Родина кофе с уникальными дикими сортами и древними традициями</p>
                     <div class="space-y-2 text-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Высота:</span>
-                            <span>1800-2200м</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Сезон сбора:</span>
-                            <span>Октябрь-Февраль</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Профиль:</span>
-                            <span>Цветочный, фруктовый</span>
-                        </div>
+                        <div class="flex justify-between"><span class="text-cream-500">Высота:</span><span class="text-cream-200">1800-2200м</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Сезон сбора:</span><span class="text-cream-200">Октябрь-Февраль</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Профиль:</span><span class="text-cream-200">Цветочный, фруктовый</span></div>
                     </div>
                 </div>
-                
-                <!-- Colombia -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=2940&auto=format&fit=crop" alt="Флаг Колумбии" class="w-8 h-6 object-cover rounded mr-3" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;" />
-                        <h3 class="font-serif text-subheading font-semibold">Колумбия</h3>
+                <div class="card animate-on-scroll p-6" data-delay="1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-6 rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=100&q=80" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
+                        <h3 class="font-display text-lg text-cream-50 font-semibold">Колумбия</h3>
                     </div>
-                    <p class="text-text-secondary mb-4">Идеальный климат Анд создает сбалансированный кофе с карамельными нотами</p>
+                    <p class="text-cream-400 text-sm mb-4">Идеальный климат Анд создает сбалансированный кофе с карамельными нотами</p>
                     <div class="space-y-2 text-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Высота:</span>
-                            <span>1200-2000м</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Сезон сбора:</span>
-                            <span>Март-Июнь</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Профиль:</span>
-                            <span>Карамель, шоколад</span>
-                        </div>
+                        <div class="flex justify-between"><span class="text-cream-500">Высота:</span><span class="text-cream-200">1200-2000м</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Сезон сбора:</span><span class="text-cream-200">Март-Июнь</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Профиль:</span><span class="text-cream-200">Карамель, шоколад</span></div>
                     </div>
                 </div>
-                
-                <!-- Kenya -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center mb-4">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2787&auto=format&fit=crop" alt="Флаг Кении" class="w-8 h-6 object-cover rounded mr-3" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <h3 class="font-serif text-subheading font-semibold">Кения</h3>
+                <div class="card animate-on-scroll p-6" data-delay="2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-6 rounded overflow-hidden"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=100&q=80" alt="" class="w-full h-full object-cover" loading="lazy" /></div>
+                        <h3 class="font-display text-lg text-cream-50 font-semibold">Кения</h3>
                     </div>
-                    <p class="text-text-secondary mb-4">Вулканические почвы дают кофе с яркой кислотностью и винными нотами</p>
+                    <p class="text-cream-400 text-sm mb-4">Вулканические почвы дают кофе с яркой кислотностью и винными нотами</p>
                     <div class="space-y-2 text-sm">
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Высота:</span>
-                            <span>1400-2000м</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Сезон сбора:</span>
-                            <span>Май-Июль</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-text-secondary">Профиль:</span>
-                            <span>Винный, ягодный</span>
-                        </div>
+                        <div class="flex justify-between"><span class="text-cream-500">Высота:</span><span class="text-cream-200">1400-2000м</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Сезон сбора:</span><span class="text-cream-200">Май-Июль</span></div>
+                        <div class="flex justify-between"><span class="text-cream-500">Профиль:</span><span class="text-cream-200">Винный, ягодный</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
-
-    <!-- Coffee Quiz Section -->
-    <section id="coffee-quiz" class="py-20 bg-primary text-white">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Найдите свой идеальный кофе</h2>
-                <p class="text-body-lg opacity-90 max-w-2xl mx-auto">
-                    Пройдите наш интерактивный тест и получите персональные рекомендации от наших экспертов
-                </p>
+    <!-- ═══════════ COFFEE QUIZ ═══════════ -->
+    <section id="coffee-quiz" class="py-24 bg-dark-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-mesh opacity-60"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-copper-400/5 blur-3xl"></div>
+        <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="section-label">Интерактивный тест</span>
+                <h2 class="text-display-sm lg:text-display font-bold mb-4">Найдите свой идеальный кофе</h2>
+                <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Пройдите интерактивный тест и получите персональные рекомендации</p>
             </div>
-            
+
             <div class="max-w-3xl mx-auto">
-                <div class="bg-white bg-opacity-10 rounded-lg p-8 backdrop-blur-sm">
+                <div class="card-glass p-8">
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-4">
-                            <span class="text-sm opacity-75">Вопрос 1 из 8</span>
-                            <span class="text-sm opacity-75">12% завершено</span>
+                            <span class="text-sm text-cream-500">Вопрос 1 из 8</span>
+                            <span class="text-sm text-cream-500">12% завершено</span>
                         </div>
-                        <div class="w-full bg-white bg-opacity-20 rounded-full h-2">
-                            <div class="bg-accent h-2 rounded-full" style="width: 12%"></div>
+                        <div class="w-full bg-dark-600 rounded-full h-2">
+                            <div class="bg-copper-400 h-2 rounded-full" style="width: 12%"></div>
                         </div>
                     </div>
-                    
-                    <div class="text-center mb-8">
-                        <h3 class="font-serif text-subheading font-semibold mb-4">Как вы обычно пьете кофе?</h3>
-                        <p class="opacity-75">Выберите наиболее подходящий вариант</p>
+
+                    <div class="text-center mb-8 quiz-question">
+                        <h3 class="font-display text-xl text-cream-50 font-semibold mb-4">Как вы обычно пьете кофе?</h3>
+                        <p class="text-cream-500">Выберите наиболее подходящий вариант</p>
                     </div>
-                    
+
                     <div class="grid md:grid-cols-2 gap-4 mb-8">
-                        <button class="p-6 bg-white bg-opacity-10 rounded-lg text-left hover:bg-opacity-20 transition-all duration-300 border-2 border-transparent hover:border-accent">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M2 21h20v-2H2v2zm1.15-4.05L4 15.47l.85 1.48c.2.34.57.55.96.55s.76-.21.96-.55L7.6 15.47l.85 1.48c.2.34.57.55.96.55s.76-.21.96-.55L11.2 15.47l.85 1.48c.2.34.57.55.96.55s.76-.21.96-.55L14.8 15.47l.85 1.48c.2.34.57.55.96.55s.76-.21.96-.55L18.4 15.47l.85 1.48c.2.34.57.55.96.55s.76-.21.96-.55L22 15.47l.85 1.48H24v-2h-1.15l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L19.23 14.95l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L15.63 14.95l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L11.03 14.95l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L7.43 14.95l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L3.83 14.95l-.85-1.48c-.2-.34-.57-.55-.96-.55s-.76.21-.96.55L0 15.47l.85 1.48H2z"/>
-                                    </svg>
+                        <button class="quiz-answer p-6 card text-left hover:border-copper-400/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold mb-1">Черный кофе</h4>
-                                    <p class="text-sm opacity-75">Без добавок, чистый вкус</p>
+                                    <h4 class="font-semibold text-cream-100 text-sm mb-1">Черный кофе</h4>
+                                    <p class="text-xs text-cream-500">Без добавок, чистый вкус</p>
                                 </div>
                             </div>
                         </button>
-                        
-                        <button class="p-6 bg-white bg-opacity-10 rounded-lg text-left hover:bg-opacity-20 transition-all duration-300 border-2 border-transparent hover:border-accent">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M18.5 3H6c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h12.5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM18 19H6V5h12v14z"/>
-                                    </svg>
+                        <button class="quiz-answer p-6 card text-left hover:border-copper-400/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold mb-1">С молоком</h4>
-                                    <p class="text-sm opacity-75">Капучино, латте, флэт уайт</p>
+                                    <h4 class="font-semibold text-cream-100 text-sm mb-1">С молоком</h4>
+                                    <p class="text-xs text-cream-500">Капучино, латте, флэт уайт</p>
                                 </div>
                             </div>
                         </button>
-                        
-                        <button class="p-6 bg-white bg-opacity-10 rounded-lg text-left hover:bg-opacity-20 transition-all duration-300 border-2 border-transparent hover:border-accent">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                    </svg>
+                        <button class="quiz-answer p-6 card text-left hover:border-copper-400/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold mb-1">Сладкий кофе</h4>
-                                    <p class="text-sm opacity-75">С сахаром, сиропами</p>
+                                    <h4 class="font-semibold text-cream-100 text-sm mb-1">Сладкий кофе</h4>
+                                    <p class="text-xs text-cream-500">С сахаром, сиропами</p>
                                 </div>
                             </div>
                         </button>
-                        
-                        <button class="p-6 bg-white bg-opacity-10 rounded-lg text-left hover:bg-opacity-20 transition-all duration-300 border-2 border-transparent hover:border-accent">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-accent bg-opacity-20 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M9.01 14H2v2h7.01v3L13 15l-3.99-4v3zm5.98-1v-3L19 14l-4.01 4v-3H8v-2h6.99z"/>
-                                    </svg>
+                        <button class="quiz-answer p-6 card text-left hover:border-copper-400/40 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold mb-1">По-разному</h4>
-                                    <p class="text-sm opacity-75">В зависимости от настроения</p>
+                                    <h4 class="font-semibold text-cream-100 text-sm mb-1">По-разному</h4>
+                                    <p class="text-xs text-cream-500">В зависимости от настроения</p>
                                 </div>
                             </div>
                         </button>
                     </div>
-                    
+
+                    <div id="quiz-result" class="hidden text-center p-6 card mb-8">
+                        <h3 class="font-display text-xl text-cream-50 font-semibold mb-4">Ваш результат</h3>
+                        <p class="text-cream-400">Результаты теста появятся здесь</p>
+                    </div>
+
                     <div class="flex justify-between">
-                        <button class="btn-secondary border-white text-white hover:bg-white hover:text-primary" disabled>Назад</button>
-                        <button class="btn-primary bg-accent text-primary">Далее</button>
+                        <button class="btn-secondary" disabled>Назад</button>
+                        <button class="btn-primary">Далее</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="section-divider"></div>
+    <!-- ═══════════ EXPERT INTERVIEWS ═══════════ -->
+    <section class="py-24 bg-dark-800">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="section-label">Экспертиза</span>
+                <h2 class="text-display-sm lg:text-display font-bold mb-4">Интервью с экспертами</h2>
+                <p class="text-body-lg text-cream-400 max-w-2xl mx-auto">Узнайте секреты мастерства от лучших профессионалов индустрии</p>
+            </div>
 
-    <!-- Expert Interviews -->
-    <section class="py-20 bg-background">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Интервью с экспертами</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Эксклюзивные беседы с фермерами, обжарщиками и чемпионами мира по кофе
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Featured Interview -->
-                <div class="card-elevated animate-on-scroll overflow-hidden">
-                    <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop" alt="Интервью с фермером" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <div class="absolute inset-0 bg-primary bg-opacity-40 flex items-center justify-center">
-                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card animate-on-scroll p-8">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-copper-400/30">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format" alt="Алексей Морозов" class="w-full h-full object-cover" loading="lazy" />
                         </div>
-                        <div class="absolute top-4 left-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-medium">
-                            Новое
+                        <div>
+                            <h3 class="font-display text-lg text-cream-50 font-semibold">Алексей Морозов</h3>
+                            <p class="text-copper-400 text-sm">Главный обжарщик</p>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-serif text-subheading font-semibold mb-3">Мария Гонсалес: Секреты высокогорного кофе</h3>
-                        <p class="text-text-secondary mb-4">Фермер из Колумбии рассказывает о влиянии высоты на вкус кофе и традиционных методах обработки</p>
-                        <div class="flex items-center justify-between text-sm">
-                            <span class="text-accent">25 минут</span>
-                            <span class="text-text-secondary">21 августа 2025</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Interview List -->
-                <div class="space-y-6">
-                    <div class="flex items-center space-x-4 p-4 card-elevated">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" alt="Джеймс Хоффман" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
-                        <div class="flex-1">
-                            <h4 class="font-semibold mb-1">Джеймс Хоффман: Наука заваривания</h4>
-                            <p class="text-sm text-text-secondary">Чемпион мира по бариста о температуре воды и времени экстракции</p>
-                            <span class="text-xs text-accent">18 минут</span>
-                        </div>
-                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flex items-center space-x-4 p-4 card-elevated">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop" alt="Анна Петрова" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
-                        <div class="flex-1">
-                            <h4 class="font-semibold mb-1">Анна Петрова: Российская кофейная культура</h4>
-                            <p class="text-sm text-text-secondary">Как развивается specialty coffee в России</p>
-                            <span class="text-xs text-accent">22 минуты</span>
-                        </div>
-                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                    
-                    <div class="flex items-center space-x-4 p-4 card-elevated">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" alt="Карлос Мендес" class="w-16 h-16 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg'; this.onerror=null;" />
-                        <div class="flex-1">
-                            <h4 class="font-semibold mb-1">Карлос Мендес: Искусство обжарки</h4>
-                            <p class="text-sm text-text-secondary">Мастер-обжарщик о профилях обжарки и развитии вкуса</p>
-                            <span class="text-xs text-accent">31 минута</span>
-                        </div>
-                        <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Seasonal Content Calendar -->
-    <section class="py-20 bg-surface">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Сезонный календарь кофе</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Следите за циклами сбора урожая и сезонными предложениями
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-6">
-                <!-- August -->
-                <div class="card-elevated animate-on-scroll p-6 border-l-4 border-accent">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-serif text-lg font-semibold">Август</h3>
-                        <span class="text-accent text-sm font-medium">Текущий</span>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Новый урожай Кении</p>
-                                <p class="text-xs text-text-secondary">Яркие ягодные ноты</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Холодный кофе</p>
-                                <p class="text-xs text-text-secondary">Сезонные рецепты</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- September -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-serif text-lg font-semibold">Сентябрь</h3>
-                        <span class="text-text-secondary text-sm">Скоро</span>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Эфиопия Йиргачеффе</p>
-                                <p class="text-xs text-text-secondary">Новый урожай</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Осенние бленды</p>
-                                <p class="text-xs text-text-secondary">Теплые ноты</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- October -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-serif text-lg font-semibold">Октябрь</h3>
-                        <span class="text-text-secondary text-sm">Планы</span>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Колумбия Уила</p>
-                                <p class="text-xs text-text-secondary">Сбор урожая</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Тыквенный латте</p>
-                                <p class="text-xs text-text-secondary">Сезонное меню</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- November -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="font-serif text-lg font-semibold">Ноябрь</h3>
-                        <span class="text-text-secondary text-sm">Планы</span>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Гватемала Антигуа</p>
-                                <p class="text-xs text-text-secondary">Новые поставки</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-2 h-2 bg-text-secondary rounded-full mt-2 flex-shrink-0"></div>
-                            <div>
-                                <p class="font-medium text-sm">Зимние напитки</p>
-                                <p class="text-xs text-text-secondary">Согревающие рецепты</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Coffee Glossary -->
-    <section class="py-20 bg-background">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Кофейный словарь</h2>
-                <p class="text-body-lg text-text-secondary max-w-2xl mx-auto">
-                    Изучайте терминологию кофейного мира с произношением и примерами
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Glossary Terms -->
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Крема</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[кре́-ма]</p>
-                    <p class="text-text-secondary text-sm">Золотистая пенка на поверхности эспрессо, образующаяся при правильной экстракции под давлением</p>
-                </div>
-                
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Терруар</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[тер-руа́р]</p>
-                    <p class="text-text-secondary text-sm">Совокупность климатических и почвенных условий, влияющих на вкус кофе из конкретного региона</p>
-                </div>
-                
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Каппинг</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[ка́п-пинг]</p>
-                    <p class="text-text-secondary text-sm">Профессиональная дегустация кофе для оценки аромата, вкуса и качества зерна</p>
-                </div>
-                
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Экстракция</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[экс-тра́к-ция]</p>
-                    <p class="text-text-secondary text-sm">Процесс извлечения растворимых веществ из молотого кофе водой при заваривании</p>
-                </div>
-                
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Бленд</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[бленд]</p>
-                    <p class="text-text-secondary text-sm">Смесь кофе из разных регионов или ферм для создания сбалансированного вкуса</p>
-                </div>
-                
-                <div class="card-elevated animate-on-scroll p-6">
-                    <div class="flex items-start justify-between mb-3">
-                        <h3 class="font-serif text-lg font-semibold">Пуровер</h3>
-                        <button class="text-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <p class="text-sm text-accent mb-2">[пу́р-овер]</p>
-                    <p class="text-text-secondary text-sm">Метод заваривания кофе, при котором горячая вода медленно проливается через молотый кофе</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <button class="btn-secondary">Посмотреть все термины (120+)</button>
-            </div>
-        </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- Newsletter Subscription -->
-    <section class="py-20 bg-primary text-white">
-        <div class="max-w-content mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="font-serif text-display font-bold mb-4 animate-on-scroll">Будьте в курсе кофейных новостей</h2>
-                <p class="text-body-lg opacity-90 max-w-2xl mx-auto">
-                    Получайте еженедельные гиды, эксклюзивные рецепты и первыми узнавайте о новых поступлениях
-                </p>
-            </div>
-            
-            <div class="max-w-2xl mx-auto">
-                <form class="flex flex-col sm:flex-row gap-4">
-                    <input type="email" placeholder="Ваш email адрес" class="flex-1 p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-30 text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" />
-                    <button type="submit" class="btn-primary bg-accent text-primary px-8 py-4 whitespace-nowrap">
-                        Подписаться
-                    </button>
-                </form>
-                <p class="text-sm opacity-75 mt-4 text-center">
-                    Никакого спама. Отписаться можно в любой момент.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white py-16">
-        <div class="max-w-content mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <svg class="w-10 h-10 text-accent" viewBox="0 0 40 40" fill="currentColor">
-                            <circle cx="20" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8v8c0 2.2-1.8 4-4 4h-8c-2.2 0-4-1.8-4-4v-8z" fill="currentColor" opacity="0.8"/>
-                            <circle cx="16" cy="16" r="1.5" fill="white"/>
-                            <circle cx="24" cy="16" r="1.5" fill="white"/>
-                        </svg>
-                        <span class="font-serif text-xl font-semibold">Dark Roast Coffee</span>
-                    </div>
-                    <p class="text-white opacity-75 mb-6 max-w-md">
-                        Место, где кофе становится искусством, а моменты превращаются в воспоминания. 
-                        Присоединяйтесь к нашему сообществу ценителей настоящего кофе.
+                    <p class="text-cream-300 font-accent italic leading-relaxed mb-4">
+                        "Обжарка -- это диалог с зерном. Каждая партия уникальна, и задача мастера -- раскрыть потенциал, заложенный природой."
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="javascript:void(0)" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
-                        <a href="javascript:void(0)" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                            </svg>
-                        </a>
-                        <a href="javascript:void(0)" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-accent hover:text-primary transition-fast">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
-                            </svg>
-                        </a>
+                    <a href="#" class="text-copper-400 text-sm hover:text-copper-300">Читать полное интервью &rarr;</a>
+                </div>
+                <div class="card animate-on-scroll p-8" data-delay="1">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-copper-400/30">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&q=80&auto=format" alt="Мария Волкова" class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div>
+                            <h3 class="font-display text-lg text-cream-50 font-semibold">Мария Волкова</h3>
+                            <p class="text-copper-400 text-sm">Главный бариста</p>
+                        </div>
+                    </div>
+                    <p class="text-cream-300 font-accent italic leading-relaxed mb-4">
+                        "Каждая чашка -- это возможность подарить человеку момент счастья. Мы не просто варим кофе -- мы создаем впечатления."
+                    </p>
+                    <a href="#" class="text-copper-400 text-sm hover:text-copper-300">Читать полное интервью &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="py-32 bg-dark-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-mesh opacity-80"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-copper-400/5 blur-3xl"></div>
+        <div class="relative z-10 max-w-narrow mx-auto px-6 text-center animate-on-scroll">
+            <span class="section-label">Готовы попробовать?</span>
+            <h2 class="text-display-sm lg:text-display font-bold mb-6">Забронируйте<br/>ваш столик</h2>
+            <p class="text-body-lg text-cream-400 mb-10 max-w-lg mx-auto">Примените знания на практике -- попробуйте наш кофе лично</p>
+            <a href="reservation_system.html" class="btn-primary text-lg px-12 py-5">Забронировать столик</a>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="py-16 bg-dark-950 border-t border-white/5">
+        <div class="max-w-content mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-copper-400/10 flex items-center justify-center"><svg class="w-4 h-4 text-copper-400" viewBox="0 0 24 24" fill="currentColor"><path d="M2 21V17C2 14.2 4.2 12 7 12H11V8H9C8.4 8 8 7.6 8 7V3C8 2.4 8.4 2 9 2H15C15.6 2 16 2.4 16 3V7C16 7.6 15.6 8 15 8H13V12H17C19.8 12 22 14.2 22 17V21H2Z"/></svg></div>
+                        <span class="font-display text-cream-100 font-semibold">Dark Roast</span>
+                    </div>
+                    <p class="text-cream-500 text-sm leading-relaxed">Премиальная кофейня в самом сердце Москвы. С 2010 года.</p>
+                </div>
+                <div>
+                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Навигация</h4>
+                    <div class="flex flex-col gap-2">
+                        <a href="menu_experience.html" class="text-cream-500 hover:text-copper-400 text-sm">Меню</a>
+                        <a href="our_philosophy.html" class="text-cream-500 hover:text-copper-400 text-sm">Философия</a>
+                        <a href="atmosphere_gallery.html" class="text-cream-500 hover:text-copper-400 text-sm">Атмосфера</a>
+                        <a href="coffee_education_center.html" class="text-cream-500 hover:text-copper-400 text-sm">Обучение</a>
                     </div>
                 </div>
-                
-                <!-- Quick Links -->
                 <div>
-                    <h3 class="font-semibold text-lg mb-4">Быстрые ссылки</h3>
-                    <ul class="space-y-2">
-                        <li><a href="homepage.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Главная</a></li>
-                        <li><a href="menu_experience.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Меню</a></li>
-                        <li><a href="our_philosophy.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">О нас</a></li>
-                        <li><a href="atmosphere_gallery.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Галерея</a></li>
-                        <li><a href="reservation_system.html" class="text-white opacity-75 hover:opacity-100 hover:text-accent transition-fast">Бронирование</a></li>
-                    </ul>
+                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Контакты</h4>
+                    <div class="flex flex-col gap-2 text-cream-500 text-sm">
+                        <span>ул. Большая Дмитровка, 15</span>
+                        <span>Москва, 125009</span>
+                        <a href="tel:+74951234567" class="hover:text-copper-400">+7 (495) 123-45-67</a>
+                        <a href="mailto:hello@darkroast.coffee" class="hover:text-copper-400">hello@darkroast.coffee</a>
+                    </div>
                 </div>
-                
-                <!-- Contact Info -->
                 <div>
-                    <h3 class="font-semibold text-lg mb-4">Контакты</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-start space-x-3">
-                            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
-                            <span class="text-white opacity-75">ул. Тверская, 15, Москва</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                            <span class="text-white opacity-75">+7 (495) 123-45-67</span>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <svg class="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                            <span class="text-white opacity-75">Пн-Вс: 7:00 - 23:00</span>
-                        </div>
+                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Часы работы</h4>
+                    <div class="flex flex-col gap-2 text-cream-500 text-sm">
+                        <span>Пн-Пт: 07:00 - 23:00</span>
+                        <span>Сб-Вс: 08:00 - 00:00</span>
+                    </div>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-dark-600 flex items-center justify-center text-cream-500 hover:bg-copper-400/10 hover:text-copper-400 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2s-.18-.05-.25-.03c-.11.02-1.79 1.14-5.06 3.34-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.86-.44-.75-.25-1.35-.38-1.3-.81.03-.22.35-.45.96-.68 3.78-1.65 6.3-2.73 7.56-3.26 3.6-1.52 4.35-1.79 4.84-1.8.11 0 .35.03.5.15.13.11.16.25.18.36-.01.06-.01.24-.02.36z"/></svg>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-dark-600 flex items-center justify-center text-cream-500 hover:bg-copper-400/10 hover:text-copper-400 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-white border-opacity-20 mt-12 pt-8 text-center">
-                <p class="text-white opacity-75">© 2025 Dark Roast Coffee. Все права защищены.</p>
+            <div class="section-divider mb-8"></div>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-cream-500 text-xs">&copy; 2025 Dark Roast Coffee. Все права защищены.</p>
+                <p class="text-cream-500 text-xs">Сделано с &#9749; в Москве</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Quiz functionality
-        let currentQuestion = 1;
-        const totalQuestions = 8;
-        
-        function nextQuestion() {
-            if (currentQuestion < totalQuestions) {
-                currentQuestion++;
-                updateQuizProgress();
-            }
-        }
-        
-        function updateQuizProgress() {
-            const progress = (currentQuestion / totalQuestions) * 100;
-            document.querySelector('.bg-accent').style.width = progress + '%';
-            document.querySelector('.text-sm.opacity-75').textContent = `Вопрос ${currentQuestion} из ${totalQuestions}`;
-            document.querySelector('.text-sm.opacity-75:last-child').textContent = `${Math.round(progress)}% завершено`;
-        }
-
-        // Newsletter subscription
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            if (email) {
-                alert('Спасибо за подписку! Мы отправим вам первое письмо в ближайшее время.');
-                this.reset();
-            }
-        });
-
-        // Audio pronunciation buttons
-        document.querySelectorAll('button svg').forEach(button => {
-            button.parentElement.addEventListener('click', function() {
-                // Placeholder for audio pronunciation
-                console.log('Playing pronunciation audio...');
-            });
-        });
-
-        // Interactive map region clicks
-        document.querySelectorAll('.animate-pulse').forEach(marker => {
-            marker.addEventListener('click', function() {
-                const region = this.getAttribute('title');
-                alert(`Показать информацию о регионе: ${region}`);
-            });
-        });
-    </script>
-<script src="../js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
