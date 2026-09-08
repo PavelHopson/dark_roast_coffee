@@ -1,18 +1,63 @@
-<div align="center">
+# Dark Roast Coffee
 
-# ☕ Dark Roast Coffee
+![Dark Roast Coffee: Бренд → Кофе → Выбор](docs/assets/repository-cover.svg)
 
-### Премиальный лендинг кофейни в тёмной стилистике
+**Кофейная витрина.** Визуальный сайт кофейного бренда: продукт, атмосфера и контент в статическом веб-формате.
 
-[![Демо](https://img.shields.io/badge/ДЕМО-dark--roast--coffee.pages.dev-D4956B?style=for-the-badge&logo=cloudflarepages&logoColor=white)](https://dark-roast-coffee.pages.dev/pages/homepage.html)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![Cloudflare](https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://pages.cloudflare.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
+<!-- repository-guide:start -->
+[Интерфейс](#readme-interface) · [Первый запуск](#readme-start) · [Что внутри](#readme-map) · [Путеводитель](docs/repository-guide.md#start) · [Карта кода](docs/repository-guide.md#map) · [Проверки](docs/repository-guide.md#checks) · [Границы и права](docs/repository-guide.md#boundaries)
 
-</div>
+<a id="readme-interface"></a>
 
----
+## Интерфейс
+
+![Dark Roast Coffee — Главная Dark Roast: история бренда, вход в меню и бронирование.](docs/assets/ui/overview.png)
+
+**Главная Dark Roast: история бренда, вход в меню и бронирование.**
+
+Локальный снимок от 8 сентября 2026: отдельный профиль браузера, без внешних API и пользовательских секретов. Это вид интерфейса, не подтверждение production-функций.
+
+<details>
+<summary><strong>Мобильный экран · 390 px</strong></summary>
+
+<img src="docs/assets/ui/mobile.png" alt="Dark Roast Coffee — мобильный экран" width="390">
+
+</details>
+
+[Открыть в полном размере](docs/assets/ui/overview.png) · [Данные снимка](docs/assets/ui/capture.json)
+
+<a id="readme-map"></a>
+
+## Проект за минуту
+
+- **[Главная](<pages/homepage.html>)** — Брендовая история и вход в кофейную витрину.
+- **[Меню](<pages/menu_experience.html>)** — Страница выбора кофе и вариантов приготовления.
+- **[Интерактивность](<js/main.js>)** — Фильтры, модальные окна и взаимодействие с контентом.
+
+<a id="readme-start"></a>
+
+## Начать локально
+
+**Среда:** Браузер; Python 3 для HTTP-просмотра. **Источник:** [pages/homepage.html](<pages/homepage.html>).
+
+Из корня клонированного репозитория:
+
+```bash
+python -m http.server 8000 --bind 127.0.0.1
+```
+
+Откройте http://127.0.0.1:8000/pages/homepage.html. `npm run dev` здесь следит за CSS, а не поднимает сайт. Build-скрипты содержат npx-вызовы; зависимости нужно отдельно проверить.
+
+<details>
+<summary><strong>Перед первым запуском и изменением кода</strong></summary>
+
+- Команды сверены с исходниками 8 сентября 2026. Это инструкция, а не отметка об успешном запуске или текущем production.
+- Установка зависимостей может обращаться в registry и выполнять lifecycle scripts. Используйте отдельную рабочую среду и демонстрационные данные.
+- Контент и изображения проверяются на права; коммерческие обещания должны соответствовать реальному предложению.
+
+
+</details>
+<!-- repository-guide:end -->
 
 ## О проекте
 
@@ -92,7 +137,7 @@
 | HTML5 | Семантическая вёрстка |
 | Tailwind CSS 3.4 | Утилитарные стили + кастомная тема |
 | Vanilla JS | Интерактивность без зависимостей |
-| Pexels | Фотографии (бесплатно, без ограничений) |
+| Фотографии | Условия использования проверяются по источнику каждого изображения |
 | Cloudflare Pages | Хостинг + CDN |
 
 ---
@@ -109,7 +154,7 @@ npm run build:css
 
 Режим разработки:
 ```bash
-npm run dev  # watch mode — автопересборка CSS
+npm run dev  # только watch CSS; HTTP-сервер не запускается
 ```
 
 ---
@@ -146,7 +191,7 @@ npx wrangler pages deploy . --project-name=dark-roast-coffee
 ```
 
 ### GitHub Pages
-Автоматически из ветки `main`.
+Вариант размещения статических файлов. Наличие GitHub Pages workflow и его последний запуск нужно проверять отдельно; README не подтверждает автоматическую публикацию.
 
 ---
 

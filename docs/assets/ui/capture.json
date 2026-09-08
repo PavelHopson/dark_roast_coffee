@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "project": "dark_roast_coffee",
+  "capturedAt": "2026-09-08T09:51:06.851Z",
+  "caption": "Главная Dark Roast: история бренда, вход в меню и бронирование.",
+  "method": "isolated-local-source-preview",
+  "context": "Local source preview, clean browser storage, reduced motion, no .env, external resources and backend APIs blocked. Repository content only, no additional fixtures or personal history; no production verification.",
+  "sourceHead": "7a17d10712ab8352b371ac75ce6561bff502f89e",
+  "sourceWorktreeDirty": true,
+  "entryFiles": [
+    {
+      "file": "index.html",
+      "sha256": "69a4d95743116c814d6d6c94e1cf2f067c1755a139b9b11c4bcfb0ccd4f4147d"
+    },
+    {
+      "file": "package.json",
+      "sha256": "be6eec1ae22b98570a772e3c516d2ba5619b4417c278062e507dd279d054bffb"
+    }
+  ],
+  "screenshots": [
+    {
+      "kind": "overview",
+      "file": "overview.png",
+      "width": 1440,
+      "height": 900,
+      "sha256": "3c70351f74dc1d53a70c4b8dbc5e32b4d15572f2e9055569c8505c76d0a49f10",
+      "bytes": 433300
+    },
+    {
+      "kind": "mobile",
+      "file": "mobile.png",
+      "width": 390,
+      "height": 844,
+      "sha256": "ac7f282da08aad9ab333bb929f1e0ec55357dd946afa89980887cec6eec53749",
+      "bytes": 176797
+    }
+  ],
+  "review": "Desktop and selected mobile captures visually reviewed before documentation use."
+}
