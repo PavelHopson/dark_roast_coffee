@@ -1,5 +1,9 @@
 # Dark Roast Coffee
 
+<!-- project-links:start -->
+[Открыть веб-версию](https://pavelhopson.github.io/dark_roast_coffee/) · [Документация](docs/repository-guide.md) · [Код](https://github.com/PavelHopson/dark_roast_coffee/tree/main) · [История изменений](https://github.com/PavelHopson/dark_roast_coffee/commits/main/)
+<!-- project-links:end -->
+
 ![Dark Roast Coffee: Бренд → Кофе → Выбор](docs/assets/repository-cover.svg)
 
 **Кофейная витрина.** Визуальный сайт кофейного бренда: продукт, атмосфера и контент в статическом веб-формате.
