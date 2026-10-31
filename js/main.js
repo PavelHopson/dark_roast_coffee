@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.addEventListener('click', () => {
       const isOpen = !mobileMenu.classList.contains('hidden');
       mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+      menuBtn.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
       // Animate hamburger → X
       const icon = menuBtn.querySelector('svg');
       if (icon) {
@@ -373,70 +375,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Form validation + submit
-  const reservationForm = document.querySelector('form');
-  if (reservationForm && window.location.pathname.includes('reservation')) {
+  // This portfolio demo has no booking backend. Never imply a reservation was made.
+  const reservationForm = document.getElementById('reservation-form');
+  if (reservationForm) {
     reservationForm.addEventListener('submit', e => {
       e.preventDefault();
-
-      // Validate required fields
-      const name = reservationForm.querySelector('[name="name"], #name');
-      const phone = reservationForm.querySelector('[name="phone"], #phone');
-
-      if (name && !name.value.trim()) {
-        name.classList.add('ring-2', 'ring-red-400');
-        name.focus();
-        showToast('Пожалуйста, введите ваше имя', 'error');
-        return;
-      }
-
-      if (phone && !phone.value.trim()) {
-        phone.classList.add('ring-2', 'ring-red-400');
-        phone.focus();
-        showToast('Пожалуйста, введите телефон', 'error');
-        return;
-      }
-
-      // Remove error states
-      reservationForm.querySelectorAll('.ring-red-400').forEach(el => {
-        el.classList.remove('ring-2', 'ring-red-400');
-      });
-
-      // Show loading
-      const submitBtn = reservationForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.classList.add('btn-loading');
-        submitBtn.disabled = true;
-      }
-
-      // Simulate submission
-      setTimeout(() => {
-        if (submitBtn) {
-          submitBtn.classList.remove('btn-loading');
-          submitBtn.disabled = false;
-        }
-
-        const nameVal = name?.value || 'Гость';
-        const dateVal = dateInput?.value || 'сегодня';
-        const timeEl = reservationForm.querySelector('select, [name="time"]');
-        const timeVal = timeEl?.value || '';
-
-        showModal(
-          'Бронирование подтверждено!',
-          `${nameVal}, ваш столик забронирован на ${dateVal}${timeVal ? ' в ' + timeVal : ''}. Мы отправим подтверждение на ваш телефон.`,
-          '☕'
-        );
-
-        reservationForm.reset();
-        if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
-      }, 1500);
-    });
-
-    // Clear error on input
-    reservationForm.querySelectorAll('input, select, textarea').forEach(input => {
-      input.addEventListener('input', () => {
-        input.classList.remove('ring-2', 'ring-red-400');
-      });
+      showToast('Демонстрация: данные не отправлены, столик не забронирован.', 'info');
     });
   }
 

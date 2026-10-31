@@ -27,7 +27,7 @@
                     <a href="coffee_education_center.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Обучение</a>
                 </div>
                 <div class="hidden lg:block"><a href="reservation_system.html" class="btn-primary btn-sm">Забронировать</a></div>
-                <button class="lg:hidden text-cream-200 p-2" id="mobile-menu-btn">
+                <button class="lg:hidden text-cream-200 p-2" id="mobile-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
@@ -65,6 +65,7 @@
                     <div class="card animate-on-scroll p-8">
                         <h2 class="font-display text-2xl text-cream-50 font-bold mb-8">Детали бронирования</h2>
 
+                        <p role="status" class="text-cream-300 mb-6">Это демонстрация сайта: заявки не отправляются и столики не бронируются.</p>
                         <form id="reservation-form" class="space-y-8">
                             <!-- Date and Time -->
                             <div class="grid md:grid-cols-2 gap-6">
@@ -213,7 +214,7 @@
 
                             <!-- Submit -->
                             <div class="pt-6">
-                                <button type="submit" class="w-full btn-primary text-lg py-4">Забронировать столик</button>
+                                <button type="submit" class="w-full btn-primary text-lg py-4">Проверить форму</button>
                                 <p class="text-sm text-cream-500 mt-3 text-center">Бронирование бесплатно. Отмена возможна за 2 часа до визита.</p>
                             </div>
                         </form>
