@@ -87,7 +87,7 @@ python -m http.server 8000 --bind 127.0.0.1
 | [Menu](https://dark-roast-coffee.pages.dev/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
 | [Philosophy](https://dark-roast-coffee.pages.dev/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
 | [Atmosphere](https://dark-roast-coffee.pages.dev/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |
-| [Reservation](https://dark-roast-coffee.pages.dev/pages/reservation_system.html) | Форма бронирования с валидацией, выбором времени, добавками, модальным подтверждением |
+| [Reservation](https://dark-roast-coffee.pages.dev/pages/reservation_system.html) | Демонстрационная форма: заявка не отправляется и бронирование не создаётся |
 | [Education](https://dark-roast-coffee.pages.dev/pages/coffee_education_center.html) | Гайды по завариванию, истории происхождения, кофейный квиз |
 
 ---
