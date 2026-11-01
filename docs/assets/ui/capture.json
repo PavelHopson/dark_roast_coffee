@@ -1,20 +1,32 @@
 {
   "schemaVersion": 1,
   "project": "dark_roast_coffee",
-  "capturedAt": "2026-09-08T09:51:06.851Z",
-  "caption": "Главная Dark Roast: история бренда, вход в меню и бронирование.",
+  "capturedAt": "2026-11-01T09:35:25.418Z",
+  "caption": "Редакционная главная Dark Roast: концепция, вход в меню и атмосферу.",
   "method": "isolated-local-source-preview",
-  "context": "Local source preview, clean browser storage, reduced motion, no .env, external resources and backend APIs blocked. Repository content only, no additional fixtures or personal history; no production verification.",
-  "sourceHead": "7a17d10712ab8352b371ac75ce6561bff502f89e",
+  "context": "Local file preview, clean browser, reduced motion; no backend or private data. Production not verified.",
+  "sourceHead": "75da0ff6b72e5cbc3eaebfe60d7531b702315711",
   "sourceWorktreeDirty": true,
   "entryFiles": [
     {
       "file": "index.html",
-      "sha256": "69a4d95743116c814d6d6c94e1cf2f067c1755a139b9b11c4bcfb0ccd4f4147d"
+      "sha256": "a73afb4e65fef0099efc2c3d7357515330d0a32493ffc6187ea04d2831c233dc"
     },
     {
-      "file": "package.json",
-      "sha256": "be6eec1ae22b98570a772e3c516d2ba5619b4417c278062e507dd279d054bffb"
+      "file": "pages/homepage.html",
+      "sha256": "bd13fbf4ff1074ca4285e30f28621f9a3044f08c973eff39a032bd1aa1f96601"
+    },
+    {
+      "file": "css/home-editorial.css",
+      "sha256": "69733d8682ff7fa2727ea357ad5d56387f1ff869830814e689f98ae4ff7c27bf"
+    },
+    {
+      "file": "js/home.js",
+      "sha256": "2922eb632d887631e3c4c5a6c8a6b323074538717951e03c976e712e6361d4b5"
+    },
+    {
+      "file": "images/coffee-editorial-hero.webp",
+      "sha256": "2ba10fd087c24ab14f3dcb6a30b22e58a58b38cd3e8dde805efbccfe921ca3db"
     }
   ],
   "screenshots": [
@@ -23,17 +35,17 @@
       "file": "overview.png",
       "width": 1440,
       "height": 900,
-      "sha256": "3c70351f74dc1d53a70c4b8dbc5e32b4d15572f2e9055569c8505c76d0a49f10",
-      "bytes": 433300
+      "sha256": "50f746128c41992e3eae2896df7d1b8fda45cd21142a3ca68cfc430e9906d16e",
+      "bytes": 1111647
     },
     {
       "kind": "mobile",
       "file": "mobile.png",
       "width": 390,
       "height": 844,
-      "sha256": "ac7f282da08aad9ab333bb929f1e0ec55357dd946afa89980887cec6eec53749",
-      "bytes": 176797
+      "sha256": "3da0de6d81282d63322386364d5d1378fa091a62c84e18f8274224222d3775dd",
+      "bytes": 321079
     }
   ],
-  "review": "Desktop and selected mobile captures visually reviewed before documentation use."
+  "review": "Desktop and mobile captures visually reviewed before documentation use."
 }

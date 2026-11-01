@@ -23,11 +23,11 @@
 
 ## Интерфейс
 
-![Dark Roast Coffee — Главная Dark Roast: история бренда, вход в меню и бронирование.](docs/assets/ui/overview.png)
+![Dark Roast Coffee — главная концепта кофейни с переходом в меню.](docs/assets/ui/overview.png)
 
-**Главная Dark Roast: история бренда, вход в меню и бронирование.**
+**Главная Dark Roast: концепция, меню и атмосфера.** Изображение первого экрана создано ИИ.
 
-Локальный снимок от 8 сентября 2026: отдельный профиль браузера, без внешних API и пользовательских секретов. Это вид интерфейса, не подтверждение production-функций.
+Локальный снимок от 1 ноября 2026: отдельный профиль браузера, без внешних API и пользовательских секретов. Это вид интерфейса, не подтверждение production-функций.
 
 <details>
 <summary><strong>Мобильный экран · 390 px</strong></summary>
@@ -83,7 +83,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 | Страница | Описание |
 |----------|----------|
-| [Homepage](https://dark-roast-coffee.pages.dev/pages/homepage.html) | Герой-секция, статистика, карточки кофе, мастерство, галерея, отзывы, CTA |
+| [Homepage](https://dark-roast-coffee.pages.dev/pages/homepage.html) | Главная концепта: кофе, меню и атмосфера |
 | [Menu](https://dark-roast-coffee.pages.dev/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
 | [Philosophy](https://dark-roast-coffee.pages.dev/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
 | [Atmosphere](https://dark-roast-coffee.pages.dev/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |

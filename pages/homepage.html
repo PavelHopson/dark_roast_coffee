@@ -1,471 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Roast Coffee — Премиальная кофейня</title>
-    <meta name="description" content="Премиальные зерна, мастерское обжаривание и незабываемая атмосфера. Dark Roast Coffee — искусство кофе." />
-    <link rel="stylesheet" href="../css/main.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Dark Roast — концепция кофейни о простых вещах и хорошем кофе."
+    />
+    <meta name="theme-color" content="#17110e" />
+    <title>Dark Roast — время для хорошего кофе</title>
+    <link rel="stylesheet" href="../css/home-editorial.css" />
     <link rel="icon" href="../public/favicon.ico" />
-</head>
-<body>
-
-    <!-- ═══════════ NAVIGATION ═══════════ -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="main-header">
-        <nav class="max-w-content mx-auto px-6 lg:px-8 py-5">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <a href="homepage.html" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-copper-400/10 flex items-center justify-center border border-copper-400/20 group-hover:border-copper-400/40 transition-colors">
-                        <svg class="w-5 h-5 text-copper-400" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M2 21V17C2 14.2 4.2 12 7 12H11V8H9C8.4 8 8 7.6 8 7V3C8 2.4 8.4 2 9 2H15C15.6 2 16 2.4 16 3V7C16 7.6 15.6 8 15 8H13V12H17C19.8 12 22 14.2 22 17V21H2Z"/>
-                        </svg>
-                    </div>
-                    <span class="font-display text-lg text-cream-100 font-semibold">Dark Roast</span>
-                </a>
-
-                <!-- Desktop Nav -->
-                <div class="hidden lg:flex items-center gap-8">
-                    <a href="menu_experience.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Меню</a>
-                    <a href="our_philosophy.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Философия</a>
-                    <a href="atmosphere_gallery.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Атмосфера</a>
-                    <a href="coffee_education_center.html" class="text-cream-400 hover:text-copper-300 text-sm font-medium">Обучение</a>
-                </div>
-
-                <!-- CTA -->
-                <div class="hidden lg:block">
-                    <a href="reservation_system.html" class="btn-primary btn-sm">Забронировать</a>
-                </div>
-
-                <!-- Mobile Burger -->
-                <button class="lg:hidden text-cream-200 p-2" id="mobile-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div class="lg:hidden hidden mt-6 pb-4" id="mobile-menu">
-                <div class="flex flex-col gap-4 card-glass p-6">
-                    <a href="menu_experience.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Меню</a>
-                    <a href="our_philosophy.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Философия</a>
-                    <a href="atmosphere_gallery.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Атмосфера</a>
-                    <a href="coffee_education_center.html" class="text-cream-300 hover:text-copper-300 font-medium py-2">Обучение</a>
-                    <a href="reservation_system.html" class="btn-primary text-center mt-2">Забронировать</a>
-                </div>
-            </div>
+    <script src="../js/home.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <div class="header-inner wrap">
+        <a
+          class="brand"
+          href="homepage.html"
+          aria-label="Dark Roast — на главную"
+          ><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
+        >
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="menu_experience.html">Меню</a
+          ><a href="our_philosophy.html">Философия</a
+          ><a href="atmosphere_gallery.html">Атмосфера</a
+          ><a href="coffee_education_center.html">О кофе</a>
         </nav>
+        <a class="header-cta" href="menu_experience.html"
+          >Посмотреть меню <span aria-hidden="true">↗</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          Разделы <span aria-hidden="true">＋</span>
+        </button>
+      </div>
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="Мобильная навигация"
+        hidden
+      >
+        <a href="menu_experience.html"
+          >Меню <span aria-hidden="true">↗</span></a
+        ><a href="our_philosophy.html"
+          >Философия <span aria-hidden="true">↗</span></a
+        ><a href="atmosphere_gallery.html"
+          >Атмосфера <span aria-hidden="true">↗</span></a
+        ><a href="coffee_education_center.html"
+          >О кофе <span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <noscript>
+        <style>.menu-toggle { display: none !important; }</style>
+        <nav class="mobile-menu" aria-label="Мобильная навигация без JavaScript">
+          <a href="menu_experience.html">Меню</a>
+          <a href="our_philosophy.html">Философия</a>
+          <a href="atmosphere_gallery.html">Атмосфера</a>
+          <a href="coffee_education_center.html">О кофе</a>
+        </nav>
+      </noscript>
     </header>
-
-    <!-- ═══════════ HERO ═══════════ -->
-    <section class="relative min-h-[90vh] flex items-end pb-16 lg:pb-24 overflow-hidden">
-        <!-- Background -->
-        <div class="absolute inset-0">
-            <img src="../images/hero.svg" alt="" class="w-full h-full object-cover" />
-            <div class="hero-gradient absolute inset-0"></div>
-        </div>
-
-        <!-- Mesh accent -->
-        <div class="absolute inset-0 bg-mesh opacity-50"></div>
-
-        <!-- Content -->
-        <div class="relative z-10 max-w-content mx-auto px-6 lg:px-8 w-full">
-            <div class="max-w-3xl">
-                <div class="mb-6 fade-in">
-                    <span class="section-label">Концепт кофейни · Демо</span>
-                </div>
-                <h1 class="font-display text-hero-sm lg:text-hero text-cream-50 font-bold mb-6 fade-in" style="animation-delay:.1s">
-                    Искусство<br/>
-                    <span class="text-gradient">тёмной обжарки</span>
-                </h1>
-                <p class="text-body-lg text-cream-400 max-w-xl mb-10 fade-in" style="animation-delay:.25s">
-                    Каждая чашка рассказывает историю происхождения, мастерства и заботы. От фермы до вашего стола — без компромиссов.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 fade-in" style="animation-delay:.4s">
-                    <a href="reservation_system.html" class="btn-primary text-base px-10 py-4">Забронировать столик</a>
-                    <a href="menu_experience.html" class="btn-secondary text-base px-10 py-4">Смотреть меню</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream-500 opacity-60">
-            <span class="text-micro font-cta">Листайте</span>
-            <div class="w-px h-8 bg-gradient-to-b from-cream-500 to-transparent animate-bounce"></div>
-        </div>
-    </section>
-
-    <!-- ═══════════ STATS STRIP ═══════════ -->
-    <section class="py-10 lg:py-14 bg-dark-800 border-y border-white/5">
-        <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
-                <div class="animate-on-scroll" data-delay="1">
-                    <div class="text-3xl lg:text-4xl font-display text-copper-400 font-bold">15+</div>
-                    <div class="text-cream-500 text-sm mt-1 font-cta">Лет опыта</div>
-                </div>
-                <div class="animate-on-scroll" data-delay="2">
-                    <div class="text-3xl lg:text-4xl font-display text-copper-400 font-bold">12</div>
-                    <div class="text-cream-500 text-sm mt-1 font-cta">Стран поставщиков</div>
-                </div>
-                <div class="animate-on-scroll" data-delay="3">
-                    <div class="text-3xl lg:text-4xl font-display text-copper-400 font-bold">47</div>
-                    <div class="text-cream-500 text-sm mt-1 font-cta">Сортов в меню</div>
-                </div>
-                <div class="animate-on-scroll" data-delay="4">
-                    <div class="text-3xl lg:text-4xl font-display text-copper-400 font-bold">98%</div>
-                    <div class="text-cream-500 text-sm mt-1 font-cta">Довольных гостей</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ FEATURED COFFEES ═══════════ -->
-    <section class="py-16 lg:py-20 bg-dark-900 bg-mesh relative grain">
-        <div class="max-w-content mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="section-label">Сезонные предложения</span>
-                <h2 class="text-display-sm lg:text-display font-bold mb-4">Зерна одного<br class="hidden lg:block"/> происхождения</h2>
-                <p class="text-body-lg text-cream-400 max-w-xl mx-auto">
-                    Тщательно отобранные сорта с уникальными вкусовыми профилями
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Card 1 -->
-                <div class="card animate-on-scroll" data-delay="1">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="../images/coffee-card.svg" alt="" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6 lg:p-8">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="badge badge-copper">Новинка</span>
-                            <span class="badge badge-dark">Светлая обжарка</span>
-                        </div>
-                        <h3 class="text-headline font-bold mb-2">Эфиопия Йиргачеффе</h3>
-                        <p class="text-cream-400 text-sm mb-4">Цветочные ноты с яркой кислинкой и послевкусием чёрного чая</p>
-                        <div class="flex items-center gap-3 text-caption text-cream-500 mb-6">
-                            <span>1800-2000м</span>
-                            <span class="w-1 h-1 rounded-full bg-copper-400"></span>
-                            <span>Мытая обработка</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-2xl font-display font-bold text-cream-50">₽890</span>
-                                <span class="text-cream-500 text-sm ml-1">/ 250г</span>
-                            </div>
-                            <button class="btn-primary btn-sm add-to-cart">В корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card animate-on-scroll" data-delay="2">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="../images/beans-card.svg" alt="" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6 lg:p-8">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="badge badge-copper">Хит продаж</span>
-                            <span class="badge badge-dark">Средняя обжарка</span>
-                        </div>
-                        <h3 class="text-headline font-bold mb-2">Колумбия Уила</h3>
-                        <p class="text-cream-400 text-sm mb-4">Сбалансированный вкус с нотами карамели и тёмного шоколада</p>
-                        <div class="flex items-center gap-3 text-caption text-cream-500 mb-6">
-                            <span>1500-1800м</span>
-                            <span class="w-1 h-1 rounded-full bg-copper-400"></span>
-                            <span>Натуральная</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-2xl font-display font-bold text-cream-50">₽750</span>
-                                <span class="text-cream-500 text-sm ml-1">/ 250г</span>
-                            </div>
-                            <button class="btn-primary btn-sm add-to-cart">В корзину</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card animate-on-scroll" data-delay="3">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden">
-                        <img src="../images/pour-card.svg" alt="" class="w-full h-full object-cover" />
-                    </div>
-                    <div class="p-6 lg:p-8">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="badge badge-copper">Лимитированный</span>
-                            <span class="badge badge-dark">Тёмная обжарка</span>
-                        </div>
-                        <h3 class="text-headline font-bold mb-2">Гватемала Антигуа</h3>
-                        <p class="text-cream-400 text-sm mb-4">Полнотелый кофе с дымными нотами и пряным послевкусием</p>
-                        <div class="flex items-center gap-3 text-caption text-cream-500 mb-6">
-                            <span>1200-1600м</span>
-                            <span class="w-1 h-1 rounded-full bg-copper-400"></span>
-                            <span>Полумытая</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-2xl font-display font-bold text-cream-50">₽820</span>
-                                <span class="text-cream-500 text-sm ml-1">/ 250г</span>
-                            </div>
-                            <button class="btn-primary btn-sm add-to-cart">В корзину</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-14 animate-on-scroll">
-                <a href="menu_experience.html" class="btn-secondary">Все 47 сортов →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ CRAFTSMANSHIP ═══════════ -->
-    <section class="py-16 lg:py-20 bg-dark-800">
-        <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Text -->
-                <div class="fade-left">
-                    <span class="section-label">Наше мастерство</span>
-                    <h2 class="text-display-sm lg:text-display font-bold mb-6">В каждом зерне —<br/><span class="text-gradient">история</span></h2>
-                    <p class="text-body-lg text-cream-400 mb-10 leading-relaxed">
-                        Наша философия основана на глубоком понимании кофе как искусства. Мы тщательно отбираем зерна от лучших фермеров мира, обжариваем их малыми партиями и готовим каждую чашку с особой заботой.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 card-feature p-5">
-                            <div class="w-11 h-11 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-cream-100 mb-1">Прямые поставки</h4>
-                                <p class="text-cream-400 text-sm">12 фермерских партнёрств по всему миру</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 card-feature p-5">
-                            <div class="w-11 h-11 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-cream-100 mb-1">Малые партии</h4>
-                                <p class="text-cream-400 text-sm">Обжарка по 5-8 кг для максимального контроля вкуса</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 card-feature p-5">
-                            <div class="w-11 h-11 rounded-xl bg-copper-400/10 flex items-center justify-center flex-shrink-0">
-                                <svg class="w-5 h-5 text-copper-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-cream-100 mb-1">SCA Сертификация</h4>
-                                <p class="text-cream-400 text-sm">Международные стандарты качества</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Images -->
-                <div class="fade-right relative">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="aspect-[3/4] rounded-2xl overflow-hidden">
-                            <img src="../images/barista.svg" alt="Бариста" class="w-full h-full object-cover" />
-                        </div>
-                        <div class="aspect-[3/4] rounded-2xl mt-12 overflow-hidden">
-                            <img src="../images/pour-card.svg" alt="Латте арт" class="w-full h-full object-cover" />
-                        </div>
-                    </div>
-                    <!-- Floating badge -->
-                    <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 card-glass px-6 py-3 flex items-center gap-3">
-                        <div class="text-copper-400 text-2xl font-display font-bold">15+</div>
-                        <div class="text-cream-400 text-xs leading-tight">лет<br/>мастерства</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ ATMOSPHERE PREVIEW ═══════════ -->
-    <section class="py-16 lg:py-20 bg-dark-900">
-        <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="section-label">Наше пространство</span>
-                <h2 class="text-display-sm lg:text-display font-bold mb-4">Атмосфера,<br/>которая вдохновляет</h2>
-            </div>
-
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-                <div class="aspect-[3/4] col-span-2 row-span-2 rounded-2xl animate-on-scroll overflow-hidden">
-                    <img src="../images/interior.svg" alt="Интерьер" class="w-full h-full object-cover" />
-                </div>
-                <div class="aspect-square rounded-2xl animate-on-scroll overflow-hidden" data-delay="1">
-                    <img src="../images/coffee-card.svg" alt="Детали" class="w-full h-full object-cover" />
-                </div>
-                <div class="aspect-square rounded-2xl animate-on-scroll overflow-hidden" data-delay="2">
-                    <img src="../images/beans-card.svg" alt="Зёрна" class="w-full h-full object-cover" />
-                </div>
-                <div class="aspect-square rounded-2xl animate-on-scroll overflow-hidden" data-delay="3">
-                    <img src="../images/pour-card.svg" alt="Обжарка" class="w-full h-full object-cover" />
-                </div>
-                <div class="aspect-square rounded-2xl animate-on-scroll overflow-hidden" data-delay="4">
-                    <img src="../images/barista.svg" alt="Атмосфера" class="w-full h-full object-cover" />
-                </div>
-            </div>
-
-            <div class="text-center mt-12 animate-on-scroll">
-                <a href="atmosphere_gallery.html" class="btn-secondary">Смотреть галерею →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ TESTIMONIALS ═══════════ -->
-    <section class="py-16 lg:py-20 bg-dark-800 bg-mesh">
-        <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="section-label">Отзывы</span>
-                <h2 class="text-display-sm font-bold">Что говорят<br/>наши гости</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-                <div class="card-feature animate-on-scroll" data-delay="1">
-                    <div class="flex items-center gap-1 mb-4">
-                        <span class="text-copper-400">★★★★★</span>
-                    </div>
-                    <p class="text-cream-300 mb-6 leading-relaxed font-accent text-lg italic">
-                        «Лучший кофе в Москве. Атмосфера, подача, вкус — всё на высшем уровне. Мое любимое место для работы.»
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-copper-400/20 flex items-center justify-center text-copper-300 font-cta font-bold text-sm">АМ</div>
-                        <div>
-                            <div class="text-cream-100 text-sm font-medium">Анна Морозова</div>
-                            <div class="text-cream-500 text-xs">IT-предприниматель</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-feature animate-on-scroll" data-delay="2">
-                    <div class="flex items-center gap-1 mb-4">
-                        <span class="text-copper-400">★★★★★</span>
-                    </div>
-                    <p class="text-cream-300 mb-6 leading-relaxed font-accent text-lg italic">
-                        «Уже третий год хожу только сюда. Бариста знают меня по имени и помнят мой заказ. Это дорогого стоит.»
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-copper-400/20 flex items-center justify-center text-copper-300 font-cta font-bold text-sm">ДК</div>
-                        <div>
-                            <div class="text-cream-100 text-sm font-medium">Дмитрий Козлов</div>
-                            <div class="text-cream-500 text-xs">Архитектор</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-feature animate-on-scroll" data-delay="3">
-                    <div class="flex items-center gap-1 mb-4">
-                        <span class="text-copper-400">★★★★★</span>
-                    </div>
-                    <p class="text-cream-300 mb-6 leading-relaxed font-accent text-lg italic">
-                        «Проводила здесь мастер-класс по каппингу — организация идеальная. Зёрна top-notch, оборудование профессиональное.»
-                    </p>
-                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
-                        <div class="w-10 h-10 rounded-full bg-copper-400/20 flex items-center justify-center text-copper-300 font-cta font-bold text-sm">ЕС</div>
-                        <div>
-                            <div class="text-cream-100 text-sm font-medium">Елена Сидорова</div>
-                            <div class="text-cream-500 text-xs">Q-грейдер, SCA</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════ CTA SECTION ═══════════ -->
-    <section class="py-20 lg:py-24 bg-dark-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-mesh opacity-80"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-copper-400/5 blur-3xl"></div>
-
-        <div class="relative z-10 max-w-narrow mx-auto px-6 text-center animate-on-scroll">
-            <span class="section-label">Готовы попробовать?</span>
-            <h2 class="text-display-sm lg:text-display font-bold mb-6">Забронируйте<br/>ваш столик</h2>
-            <p class="text-body-lg text-cream-400 mb-10 max-w-lg mx-auto">
-                Выберите удобное время и мы подготовим для вас идеальное место с идеальным кофе
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="../images/coffee-editorial-hero.webp"
+          alt="Чашка чёрного кофе на деревянной стойке"
+          fetchpriority="high"
+          width="1672"
+          height="941"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-inner wrap">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> КОНЦЕПТ КОФЕЙНИ</p>
+            <h1 id="hero-title">Время для<br /><em>хорошего кофе.</em></h1>
+            <p class="hero-description">
+              Для встреч, длинных разговоров и неспешных утр.
             </p>
-            <a href="reservation_system.html" class="btn-primary text-lg px-12 py-5 animate-[pulseGlow_3s_ease-in-out_infinite]">
-                Забронировать столик
-            </a>
-        </div>
-    </section>
-
-    <!-- ═══════════ FOOTER ═══════════ -->
-    <footer class="py-16 bg-dark-950 border-t border-white/5">
-        <div class="max-w-content mx-auto px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-10 mb-12">
-                <!-- Brand -->
-                <div class="md:col-span-1">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-9 h-9 rounded-xl bg-copper-400/10 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-copper-400" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M2 21V17C2 14.2 4.2 12 7 12H11V8H9C8.4 8 8 7.6 8 7V3C8 2.4 8.4 2 9 2H15C15.6 2 16 2.4 16 3V7C16 7.6 15.6 8 15 8H13V12H17C19.8 12 22 14.2 22 17V21H2Z"/>
-                            </svg>
-                        </div>
-                        <span class="font-display text-cream-100 font-semibold">Dark Roast</span>
-                    </div>
-                    <p class="text-cream-500 text-sm leading-relaxed">Премиальная кофейня в самом сердце Москвы. С 2010 года.</p>
-                </div>
-
-                <!-- Navigation -->
-                <div>
-                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Навигация</h4>
-                    <div class="flex flex-col gap-2">
-                        <a href="menu_experience.html" class="text-cream-500 hover:text-copper-400 text-sm">Меню</a>
-                        <a href="our_philosophy.html" class="text-cream-500 hover:text-copper-400 text-sm">Философия</a>
-                        <a href="atmosphere_gallery.html" class="text-cream-500 hover:text-copper-400 text-sm">Атмосфера</a>
-                        <a href="coffee_education_center.html" class="text-cream-500 hover:text-copper-400 text-sm">Обучение</a>
-                    </div>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Контакты</h4>
-                    <div class="flex flex-col gap-2 text-cream-500 text-sm">
-                        <span>ул. Большая Дмитровка, 15</span>
-                        <span>Москва, 125009</span>
-                        <a href="tel:+74951234567" class="hover:text-copper-400">+7 (495) 123-45-67</a>
-                        <a href="mailto:hello@darkroast.coffee" class="hover:text-copper-400">hello@darkroast.coffee</a>
-                    </div>
-                </div>
-
-                <!-- Hours -->
-                <div>
-                    <h4 class="text-cream-200 font-cta font-semibold text-sm mb-4">Часы работы</h4>
-                    <div class="flex flex-col gap-2 text-cream-500 text-sm">
-                        <span>Пн–Пт: 07:00 — 23:00</span>
-                        <span>Сб–Вс: 08:00 — 00:00</span>
-                    </div>
-                    <div class="flex gap-3 mt-6">
-                        <a href="#" class="w-9 h-9 rounded-lg bg-dark-600 flex items-center justify-center text-cream-500 hover:bg-copper-400/10 hover:text-copper-400 transition-all">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2s-.18-.05-.25-.03c-.11.02-1.79 1.14-5.06 3.34-.48.33-.91.49-1.3.48-.43-.01-1.25-.24-1.86-.44-.75-.25-1.35-.38-1.3-.81.03-.22.35-.45.96-.68 3.78-1.65 6.3-2.73 7.56-3.26 3.6-1.52 4.35-1.79 4.84-1.8.11 0 .35.03.5.15.13.11.16.25.18.36-.01.06-.01.24-.02.36z"/></svg>
-                        </a>
-                        <a href="#" class="w-9 h-9 rounded-lg bg-dark-600 flex items-center justify-center text-cream-500 hover:bg-copper-400/10 hover:text-copper-400 transition-all">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                        </a>
-                    </div>
-                </div>
+            <div class="hero-actions">
+              <a class="button button-light" href="menu_experience.html"
+                >Открыть меню <span aria-hidden="true">↗</span></a
+              ><a class="text-link" href="#concept"
+                >О концепции <span aria-hidden="true">↓</span></a
+              >
             </div>
-
-            <div class="section-divider mb-8"></div>
-
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="text-cream-500 text-xs">© 2025 Dark Roast Coffee. Все права защищены.</p>
-                <p class="text-cream-500 text-xs">Сделано с ☕ в Москве</p>
-            </div>
+          </div>
+          <div class="hero-foot">
+            <span>ОБЖАРКА · ВКУС · АТМОСФЕРА</span><span>ЛИСТАЙТЕ ВНИЗ ↓</span>
+          </div>
         </div>
+      </section>
+      <section class="intro" id="concept" aria-labelledby="intro-title">
+        <div class="wrap intro-grid">
+          <p class="section-index">
+            <span>01 / КОНЦЕПЦИЯ</span><span>DARK ROAST</span>
+          </p>
+          <div class="intro-heading">
+            <p class="kicker">ПАУЗА В ГОРОДЕ</p>
+            <h2 id="intro-title">Ничего лишнего.<br /><em>Только кофе.</em></h2>
+          </div>
+          <div class="intro-copy">
+            <p>Место, куда хочется зайти по пути — и остаться чуть дольше.</p>
+            <p>
+              В этом концепте мы собрали кофейную классику, тёплую атмосферу и
+              внимание к деталям.
+            </p>
+            <a class="inline-link" href="our_philosophy.html"
+              >О нашей идее <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="menu-section" aria-labelledby="menu-title">
+        <div class="wrap menu-layout">
+          <div class="menu-intro">
+            <p class="kicker">02 / МЕНЮ</p>
+            <h2 id="menu-title">Какой кофе<br /><em>выберете сегодня?</em></h2>
+            <p>
+              От короткого эспрессо до мягкого кофе с молоком. Откройте меню и
+              найдите свой вариант.
+            </p>
+            <a class="inline-link light-link" href="menu_experience.html"
+              >Перейти в меню <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="menu-list" aria-label="Напитки в меню">
+            <a href="menu_experience.html"
+              ><span class="menu-number">01</span
+              ><span class="menu-name">Эспрессо</span
+              ><span class="menu-arrow" aria-hidden="true">↗</span></a
+            ><a href="menu_experience.html"
+              ><span class="menu-number">02</span
+              ><span class="menu-name">Фильтр-кофе</span
+              ><span class="menu-arrow" aria-hidden="true">↗</span></a
+            ><a href="menu_experience.html"
+              ><span class="menu-number">03</span
+              ><span class="menu-name">Кофе с молоком</span
+              ><span class="menu-arrow" aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="closing" aria-labelledby="closing-title">
+        <div class="wrap closing-inner">
+          <div>
+            <p class="kicker">03 / АТМОСФЕРА</p>
+            <h2 id="closing-title">
+              Хороший день<br /><em>начинается с паузы.</em>
+            </h2>
+          </div>
+          <div class="closing-copy">
+            <p>
+              Посмотрите, из каких деталей складывается настроение Dark Roast.
+            </p>
+            <a class="button button-dark" href="atmosphere_gallery.html"
+              >Открыть галерею <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <a class="brand footer-brand" href="homepage.html"
+          ><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
+        >
+        <p>Демонстрационный проект для портфолио.</p>
+        <a href="#main">Наверх ↑</a>
+      </div>
     </footer>
-
-    <script src="../js/main.js"></script>
-</body>
+  </body>
 </html>
