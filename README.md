@@ -44,7 +44,7 @@
 
 - **[Главная](<pages/homepage.html>)** — Брендовая история и вход в кофейную витрину.
 - **[Меню](<pages/menu_experience.html>)** — Страница выбора кофе и вариантов приготовления.
-- **[Интерактивность](<js/main.js>)** — Фильтры, модальные окна и взаимодействие с контентом.
+- **[Интерактивность](<js/pages.js>)** — фильтры, демонстрационная корзина и квиз.
 
 <a id="readme-start"></a>
 
@@ -73,7 +73,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 ## О проекте
 
-**Dark Roast Coffee** — многостраничный лендинг премиальной кофейни с полностью тёмным дизайном, медными/янтарными акцентами и современными CSS-эффектами.
+**Dark Roast Coffee** — многостраничный концепт кофейни с тёплой палитрой и адаптивной вёрсткой. Контент, цены и форма бронирования демонстрационные.
 
 **[→ Открыть демо](https://pavelhopson.github.io/dark_roast_coffee/pages/homepage.html)**
 
@@ -84,126 +84,24 @@ python -m http.server 8000 --bind 127.0.0.1
 | Страница | Описание |
 |----------|----------|
 | [Homepage](https://pavelhopson.github.io/dark_roast_coffee/pages/homepage.html) | Главная концепта: кофе, меню и атмосфера |
-| [Menu](https://pavelhopson.github.io/dark_roast_coffee/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
-| [Philosophy](https://pavelhopson.github.io/dark_roast_coffee/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
-| [Atmosphere](https://pavelhopson.github.io/dark_roast_coffee/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |
+| [Menu](https://pavelhopson.github.io/dark_roast_coffee/pages/menu_experience.html) | Фильтр по обжарке и демонстрационная корзина в браузере; оформление заказа не подключено |
+| [Philosophy](https://pavelhopson.github.io/dark_roast_coffee/pages/our_philosophy.html) | Концепция и принципы приготовления кофе |
+| [Atmosphere](https://pavelhopson.github.io/dark_roast_coffee/pages/atmosphere_gallery.html) | Галерея с фильтром; иллюстрации концепта созданы ИИ |
 | [Reservation](https://pavelhopson.github.io/dark_roast_coffee/pages/reservation_system.html) | Демонстрационная форма: заявка не отправляется и бронирование не создаётся |
-| [Education](https://pavelhopson.github.io/dark_roast_coffee/pages/coffee_education_center.html) | Гайды по завариванию, истории происхождения, кофейный квиз |
+| [Education](https://pavelhopson.github.io/dark_roast_coffee/pages/coffee_education_center.html) | Способы заваривания и квиз из трёх вопросов |
 
 ---
 
-## Дизайн-система
+## Реализация
 
-### Цветовая палитра
-```
-Фон:     #0D0D0D → #141414 → #1A1A1A → #222222
-Акцент:  #D4956B → #E8B882 (медный/янтарный)
-Текст:   #FFFCF9 → #F5E6D3 → #D4C0A8 → #B8A68E (кремовый)
-```
+Статические HTML-страницы, локальные CSS и JavaScript; серверная часть не требуется. Основные стили находятся в `css/home-editorial.css` и `css/inner-editorial.css`, интерактивность — в `js/home.js` и `js/pages.js`.
 
-### Типографика
-- **Playfair Display** — заголовки (serif, элегантный)
-- **Source Sans Pro** — основной текст (sans-serif, читаемый)
-- **Montserrat** — кнопки и лейблы (CTA)
-- **Crimson Text** — цитаты и акцентный текст
+- Корзина сохраняется в localStorage текущего браузера и не отправляет заказы.
+- Форма бронирования демонстрационная: данные не отправляются и столик не бронируется.
+- В галерее использованы иллюстрации, созданные ИИ.
+- Без JavaScript форма бронирования недоступна, а содержимое страниц остаётся читаемым.
 
-### Компоненты
-- `card` — тёмные карты с медной подсветкой при hover
-- `card-feature` — с градиентной линией сверху
-- `card-glass` — glassmorphism с backdrop-blur
-- `btn-primary` — градиент + glow + подъём при hover
-- `img-zoom` — плавный zoom изображений
-- `text-gradient` — переливающийся медный текст
-- `bg-mesh` — тёплые gradient mesh фоны
-- `section-label` — мелкий uppercase медный текст
-
-### Анимации
-- Scroll-triggered fade-in/up с IntersectionObserver
-- Staggered delays для каскадного появления карточек
-- Fade-left/right для двухколоночных макетов
-- Hero gradient overlay на фоновом изображении
-- Карточки с translateY + shadow при hover
-
----
-
-## Интерактивность (JavaScript)
-
-| Функция | Описание |
-|---------|----------|
-| Модальные окна | Заменяют alert() — подтверждение бронирования, корзина |
-| Toast-уведомления | Success/error/info при действиях |
-| Lightbox | Клик по фото → полноэкранный просмотр (Esc для закрытия) |
-| Фильтры меню | Реальная фильтрация карточек с анимацией |
-| Корзина | localStorage persistence + badge счётчик |
-| Форма бронирования | Валидация + loading state + success modal |
-| Кофейный квиз | Результаты с emoji, уровнями и progress bar |
-| Навигация | Scroll-эффект хедера (blur + тёмный фон) |
-| Галерея | Табы утро/день/вечер с плавными переходами |
-
----
-
-## Стек
-
-| Технология | Роль |
-|-----------|------|
-| HTML5 | Семантическая вёрстка |
-| Tailwind CSS 3.4 | Утилитарные стили + кастомная тема |
-| Vanilla JS | Интерактивность без зависимостей |
-| Фотографии | Условия использования проверяются по источнику каждого изображения |
-| Cloudflare Pages | Хостинг + CDN |
-
----
-
-## Быстрый старт
-
-```bash
-git clone https://github.com/PavelHopson/dark_roast_coffee.git
-cd dark_roast_coffee
-npm install
-npm run build:css
-# Открыть pages/homepage.html в браузере
-```
-
-Режим разработки:
-```bash
-npm run dev  # только watch CSS; HTTP-сервер не запускается
-```
-
----
-
-## Структура проекта
-
-```
-dark_roast_coffee/
-├── css/
-│   ├── tailwind.css          # Исходный CSS + кастомные компоненты
-│   └── main.css              # Скомпилированный CSS
-├── js/
-│   └── main.js               # Вся интерактивность
-├── pages/
-│   ├── homepage.html          # Главная
-│   ├── menu_experience.html   # Меню
-│   ├── our_philosophy.html    # Философия
-│   ├── atmosphere_gallery.html # Галерея
-│   ├── reservation_system.html # Бронирование
-│   └── coffee_education_center.html # Обучение
-├── public/                    # Favicon, manifest
-├── index.html                 # Редирект на homepage
-├── tailwind.config.js         # Тема: цвета, шрифты, тени
-└── package.json
-```
-
----
-
-## Деплой
-
-### Cloudflare Pages
-```bash
-npx wrangler pages deploy . --project-name=dark-roast-coffee
-```
-
-### GitHub Pages
-Вариант размещения статических файлов. Наличие GitHub Pages workflow и его последний запуск нужно проверять отдельно; README не подтверждает автоматическую публикацию.
+Для просмотра достаточно локального HTTP-сервера, как указано выше. Установка зависимостей не нужна.
 
 ---
 
