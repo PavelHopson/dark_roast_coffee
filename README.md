@@ -75,7 +75,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 **Dark Roast Coffee** — многостраничный лендинг премиальной кофейни с полностью тёмным дизайном, медными/янтарными акцентами и современными CSS-эффектами.
 
-**[→ Открыть демо](https://dark-roast-coffee.pages.dev/pages/homepage.html)**
+**[→ Открыть демо](https://pavelhopson.github.io/dark_roast_coffee/pages/homepage.html)**
 
 ---
 
@@ -83,12 +83,12 @@ python -m http.server 8000 --bind 127.0.0.1
 
 | Страница | Описание |
 |----------|----------|
-| [Homepage](https://dark-roast-coffee.pages.dev/pages/homepage.html) | Главная концепта: кофе, меню и атмосфера |
-| [Menu](https://dark-roast-coffee.pages.dev/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
-| [Philosophy](https://dark-roast-coffee.pages.dev/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
-| [Atmosphere](https://dark-roast-coffee.pages.dev/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |
-| [Reservation](https://dark-roast-coffee.pages.dev/pages/reservation_system.html) | Демонстрационная форма: заявка не отправляется и бронирование не создаётся |
-| [Education](https://dark-roast-coffee.pages.dev/pages/coffee_education_center.html) | Гайды по завариванию, истории происхождения, кофейный квиз |
+| [Homepage](https://pavelhopson.github.io/dark_roast_coffee/pages/homepage.html) | Главная концепта: кофе, меню и атмосфера |
+| [Menu](https://pavelhopson.github.io/dark_roast_coffee/pages/menu_experience.html) | Интерактивное меню с фильтрами, корзина (localStorage), размеры и методы заваривания |
+| [Philosophy](https://pavelhopson.github.io/dark_roast_coffee/pages/our_philosophy.html) | Манифест, этика поставок, процесс обжарки, команда |
+| [Atmosphere](https://pavelhopson.github.io/dark_roast_coffee/pages/atmosphere_gallery.html) | Фотогалерея по времени суток (утро/день/вечер), элементы дизайна |
+| [Reservation](https://pavelhopson.github.io/dark_roast_coffee/pages/reservation_system.html) | Демонстрационная форма: заявка не отправляется и бронирование не создаётся |
+| [Education](https://pavelhopson.github.io/dark_roast_coffee/pages/coffee_education_center.html) | Гайды по завариванию, истории происхождения, кофейный квиз |
 
 ---
 
