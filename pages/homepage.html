@@ -10,8 +10,12 @@
     <meta name="theme-color" content="#17110e" />
     <title>Dark Roast — время для хорошего кофе</title>
     <link rel="stylesheet" href="../css/home-editorial.css" />
-    <link rel="icon" href="../public/favicon.ico" />
+    <link rel="icon" href="../public/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="../public/favicon.ico" />
+    <link rel="apple-touch-icon" href="../public/apple-touch-icon.png" />
     <script src="../js/home.js" defer></script>
+    <link rel="stylesheet" href="../css/effects.css" />
+    <script src="../js/effects.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">К содержанию</a>
@@ -21,7 +25,7 @@
           class="brand"
           href="homepage.html"
           aria-label="Dark Roast — на главную"
-          ><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
+          ><img class="brand-mark" src="../public/dark-roast-mark.svg" alt="" width="40" height="40" /><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
         >
         <nav class="desktop-nav" aria-label="Основная навигация">
           <a href="menu_experience.html">Меню</a
@@ -120,7 +124,7 @@
         </div>
       </section>
       <section class="menu-section" aria-labelledby="menu-title">
-        <div class="wrap menu-layout">
+        <div class="wrap menu-layout menu-layout--photos">
           <div class="menu-intro">
             <p class="kicker">02 / МЕНЮ</p>
             <h2 id="menu-title">Какой кофе<br /><em>выберете сегодня?</em></h2>
@@ -132,21 +136,18 @@
               >Перейти в меню <span aria-hidden="true">↗</span></a
             >
           </div>
-          <div class="menu-list" aria-label="Напитки в меню">
-            <a href="menu_experience.html"
-              ><span class="menu-number">01</span
-              ><span class="menu-name">Эспрессо</span
-              ><span class="menu-arrow" aria-hidden="true">↗</span></a
-            ><a href="menu_experience.html"
-              ><span class="menu-number">02</span
-              ><span class="menu-name">Фильтр-кофе</span
-              ><span class="menu-arrow" aria-hidden="true">↗</span></a
-            ><a href="menu_experience.html"
-              ><span class="menu-number">03</span
-              ><span class="menu-name">Кофе с молоком</span
-              ><span class="menu-arrow" aria-hidden="true">↗</span></a
-            >
+          <div class="drink-cards">
+            <a class="drink-card" href="menu_experience.html"><span class="drink-card__photo"><img src="../images/drink-espresso.webp" alt="Эспрессо в тёмной чашке" width="900" height="1125" loading="lazy" /></span><span class="drink-card__name">Эспрессо <span aria-hidden="true">↗</span></span></a>
+            <a class="drink-card" href="menu_experience.html"><span class="drink-card__photo"><img src="../images/drink-filter.webp" alt="Фильтр-кофе в стеклянном сервере" width="900" height="1125" loading="lazy" /></span><span class="drink-card__name">Фильтр-кофе <span aria-hidden="true">↗</span></span></a>
+            <a class="drink-card" href="menu_experience.html"><span class="drink-card__photo"><img src="../images/drink-latte.webp" alt="Капучино с рисунком на пенке" width="900" height="1125" loading="lazy" /></span><span class="drink-card__name">Кофе с молоком <span aria-hidden="true">↗</span></span></a>
           </div>
+        </div>
+</section>
+      <section class="moments" aria-label="Атмосфера кофейни">
+        <div class="moments__grid">
+          <figure><img src="../images/coffee-interior.webp" alt="Интерьер кофейни" loading="lazy" /></figure>
+          <figure><img src="../images/drink-filter.webp" alt="Фильтр-кофе крупным планом" loading="lazy" /></figure>
+          <figure><img src="../images/coffee-brewing.webp" alt="Бариста заваривает кофе" loading="lazy" /></figure>
         </div>
       </section>
       <section class="closing" aria-labelledby="closing-title">
@@ -171,7 +172,7 @@
     <footer class="footer">
       <div class="wrap footer-inner">
         <a class="brand footer-brand" href="homepage.html"
-          ><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
+          ><img class="brand-mark" src="../public/dark-roast-mark.svg" alt="" width="40" height="40" /><span>DARK ROAST</span><small>COFFEE CONCEPT</small></a
         >
         <p>Демонстрационный проект для портфолио.</p>
         <a href="#main">Наверх ↑</a>
